@@ -24,14 +24,29 @@ Install the packaged skills into a local skill directory and make them available
 ├── openclaw-ops/
 ├── openclaw-research/
 ├── openclaw-coding/
-└── openclaw-docs/
+├── openclaw-docs/
+├── openclaw-runtime/
+└── openclaw-release/
 ```
 
 ### What to verify
 - the target skill directory exists
+- all **7 packaged skills** were copied
 - each copied skill contains `SKILL.md`
 - each copied skill contains `references/`
 - each copied skill contains `agents/openai.yaml`
+
+### Recommended starting subset
+For most runtimes, start by actively using these 5:
+- `openclaw-manus`
+- `openclaw-ops`
+- `openclaw-research`
+- `openclaw-coding`
+- `openclaw-docs`
+
+Add these advanced/specialized skills when needed:
+- `openclaw-runtime`
+- `openclaw-release`
 
 ## Example 2: Minimal manual routing without automatic skill loading
 

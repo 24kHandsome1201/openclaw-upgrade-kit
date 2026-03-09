@@ -12,10 +12,16 @@ You can integrate it in three practical ways.
 
 If your OpenClaw environment supports local skill folders, copy one or more skill directories from this repo into the location your setup uses for skills.
 
-Recommended starting skills:
+The installer packages **7 total skills**, but the recommended starting skills are:
 - `skills/openclaw-manus/`
 - `skills/openclaw-ops/`
+- `skills/openclaw-research/`
+- `skills/openclaw-coding/`
 - `skills/openclaw-docs/`
+
+Advanced / specialized packaged skills:
+- `skills/openclaw-runtime/`
+- `skills/openclaw-release/`
 
 ## Option 2: Use as agent behavior reference
 
@@ -35,8 +41,12 @@ A practical pattern is:
 - use `openclaw-research` for latest-info and source-backed comparisons
 - use `openclaw-coding` for repository changes and validation
 - use `openclaw-docs` for README/setup/runbook review and doc drift
+- use `openclaw-runtime` when the main task is routing, fallback, layout choice, or handoff guidance
+- use `openclaw-release` when the main task is release-readiness, dry-run review, or packaging/archive verification
 
 This gives you a general skill plus task-specific skills.
+
+In other words: the repo currently ships **7 packaged skills**, but most users should start with the core 5 and add `openclaw-runtime` / `openclaw-release` when they need routing/runtime or release-specific behavior.
 
 ## Suggested activation strategy
 
@@ -78,6 +88,20 @@ Use `openclaw-docs` when the task is primarily about:
 - runbook correction
 - doc-to-code drift checks
 
+### Runtime specialization
+Use `openclaw-runtime` when the task is primarily about:
+- deciding which skill should own the task
+- explaining fallback behavior
+- selecting host/runtime layout patterns
+- documenting or reviewing manual routing choices
+
+### Release specialization
+Use `openclaw-release` when the task is primarily about:
+- release-readiness review
+- dry-run evidence collection
+- archive/package verification
+- deciding whether a release is ready, risky, or blocked
+
 ## Recommended file mapping
 
 If your environment organizes local skills in a directory, a typical target structure may look like:
@@ -100,7 +124,15 @@ If your environment organizes local skills in a directory, a typical target stru
 │   ├── SKILL.md
 │   ├── references/
 │   └── agents/
-└── openclaw-docs/
+├── openclaw-docs/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+├── openclaw-runtime/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+└── openclaw-release/
     ├── SKILL.md
     ├── references/
     └── agents/

@@ -29,15 +29,17 @@ Optional sanity check right after install:
 
 This is useful because it confirms the expected repo-level skills/docs/scripts are present before you debug a runtime issue that is really just an incomplete local setup.
 
-This copies:
+This installs all **7 packaged skills** into:
+- `~/.codex/skills/`
+
+Packaged skills currently are:
 - `skills/openclaw-manus/`
 - `skills/openclaw-ops/`
 - `skills/openclaw-research/`
 - `skills/openclaw-coding/`
 - `skills/openclaw-docs/`
-
-into:
-- `~/.codex/skills/`
+- `skills/openclaw-runtime/`
+- `skills/openclaw-release/`
 
 ## Expected result
 
@@ -61,11 +63,36 @@ You should end up with:
 │   ├── SKILL.md
 │   ├── references/
 │   └── agents/
-└── openclaw-docs/
+├── openclaw-docs/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+├── openclaw-runtime/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+└── openclaw-release/
     ├── SKILL.md
     ├── references/
     └── agents/
 ```
+
+## Packaged vs recommended starting skills
+
+The installer copies **all 7 packaged skills**.
+
+For most users, the **recommended starting skills** are:
+- `openclaw-manus`
+- `openclaw-ops`
+- `openclaw-research`
+- `openclaw-coding`
+- `openclaw-docs`
+
+The **advanced / specialized skills** are:
+- `openclaw-runtime` — for routing, fallback, manual handoff, and layout choice
+- `openclaw-release` — for release prep, dry-run review, packaging/archive checks
+
+You should expect all 7 to be installed even if your first tests only use the core 5.
 
 ## Suggested usage pattern
 

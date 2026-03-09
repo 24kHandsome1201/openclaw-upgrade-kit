@@ -1,6 +1,9 @@
 # 10-Phase Roadmap
 
-This roadmap turns `openclaw-upgrade-kit` from an initial skill pack into a more complete, verifiable upgrade framework for execution-oriented open agents.
+This document is the **historical / long-horizon evolution map** for `openclaw-upgrade-kit`.
+
+Use it to understand how the repository grew from an initial skill pack into a broader execution-upgrade framework.
+For the **current execution priority**, use `docs/research/derived/development-priority-roadmap-2026-03.md` as the source of truth.
 
 Each phase includes a goal, scope, verifiable deliverables, acceptance criteria, and dependency notes.
 
@@ -12,56 +15,30 @@ Each phase includes a goal, scope, verifiable deliverables, acceptance criteria,
 | --- | --- | --- |
 | Phase 1 — Foundation MVP | Done | Core positioning, Manus skill, starter examples, and benchmark baseline are in place. |
 | Phase 2 — Usability and Setup | Done | Install script, setup example, and skill selection docs are present. |
-| Phase 3 — Skill System Expansion | Done | Ops, research, coding, and docs specialization now exist. |
+| Phase 3 — Skill System Expansion | Done | Ops, research, coding, docs, runtime, and release specialization now exist. |
 | Phase 4 — Benchmark Results Layer | Done | Result template, guide, and example result files are present. |
 | Phase 5 — Coding Skill and Code-Change Validation | Done | `openclaw-coding` and coding benchmark/example materials are present. |
 | Phase 6 — Documentation and Review Workflow | Done | `openclaw-docs`, docs example, and doc review materials are present. |
-| Phase 7 — Distribution and Packaging | Partial | Install/list/version scripts and versioned install docs exist; packaging can still become more release-aware. |
+| Phase 7 — Distribution and Packaging | Done | Install/list/version/archive/release-helper scripts and versioned install docs are present. |
 | Phase 8 — Runtime Integration Patterns | Done | Routing patterns, default-vs-specialized guidance, and fallback policy are documented. |
 | Phase 9 — State, Memory, and Long-Task Patterns | Done | Long-task patterns, checkpoint template, and resume/recovery guidance now exist. |
-| Phase 10 — Validation at Scale and Community Loop | Next | The repo now has the base ingredients, but still needs explicit community benchmark/release workflows. |
+| Phase 10 — Validation at Scale and Community Loop | Done | Benchmark contribution, release discipline, evaluation cadence, and long-task result examples now exist. |
 
-## Current phase grouping
+## How to read this roadmap now
 
-### Completed core build-out
-- Phase 1 — Foundation MVP
-- Phase 2 — Usability and Setup
-- Phase 3 — Skill System Expansion
-- Phase 4 — Benchmark Results Layer
-- Phase 5 — Coding Skill and Code-Change Validation
-- Phase 6 — Documentation and Review Workflow
-- Phase 8 — Runtime Integration Patterns
-- Phase 9 — State, Memory, and Long-Task Patterns
+### Historical phases already landed
+Phases 1-10 are now best read as a completed build-out arc for the repository.
 
-### In-progress support layer
-- Phase 7 — Distribution and Packaging
+### Current execution source
+For active prioritization, use:
+- `docs/research/derived/development-priority-roadmap-2026-03.md`
+- `docs/research/derived/executable-backlog-from-feedback-2026-03.md`
 
-### Next major milestone
-- Phase 10 — Validation at Scale and Community Loop
-
-## Recommended next milestone
-
-Prioritize **Phase 10 — Validation at Scale and Community Loop** next.
-
-Reason:
-- the project already has enough skills, examples, routing rules, and long-task guidance to support broader reuse
-- the biggest remaining gap is turning these assets into a repeatable community contribution and release loop
-- better release/evaluation discipline will make future packaging and runtime work easier to validate
-
-## Suggested next verifiable deliverables
-
-For the next milestone, prefer small, reviewable artifacts such as:
-- benchmark contribution guide
-- release checklist tied to measurable evidence
-- evaluation cadence doc
-- one long-task benchmark example showing interruption -> resume -> completion
-
-## Suggested execution order from here
-
-1. Phase 10 community/evaluation docs
-2. one long-task benchmark example
-3. improved packaging/release-aware install flow
-4. deeper runtime-specific integration notes if a host layout stabilizes
+### What this file is still good for
+Use this file when you want to understand:
+- how the repository matured over time
+- which capability layers already exist
+- which categories of work were originally intended to stack together
 
 ---
 

@@ -9,6 +9,10 @@ If you are unsure, start with:
 
 It is the general execution-upgrade skill.
 
+The full packaged skill set is broader than the recommended starting set:
+- **Recommended first skills** are the ones most users need first (`openclaw-manus`, then the domain skills).
+- **Full skill set** also includes advanced/specialized support skills like `openclaw-runtime` and `openclaw-release`.
+
 ## Skill chooser
 
 ### Choose `openclaw-manus` for:
@@ -47,6 +51,21 @@ It is the general execution-upgrade skill.
 - release note consistency checks
 - documentation correction tied to real implementation
 
+### Choose `openclaw-runtime` for:
+- routing decisions between skills
+- fallback policy questions
+- host/runtime layout selection
+- integration-path design
+- manual handoff between general and specialized skills
+- tasks where the main work is choosing or explaining execution lanes rather than doing the domain task itself
+
+### Choose `openclaw-release` for:
+- release-readiness checks
+- dry-run review and evidence collection
+- packaging/archive verification
+- deciding whether a release should be treated as ready, risky, or blocked
+- tasks where the main work is release gating rather than coding or runtime diagnosis
+
 ## Decision shortcut
 
 Ask:
@@ -65,6 +84,14 @@ Ask:
 
 ### Is the main task reviewing or correcting documentation against implementation?
 - yes -> `openclaw-docs`
+- no -> continue
+
+### Is the main task routing, fallback, or runtime-integration choice?
+- yes -> `openclaw-runtime`
+- no -> continue
+
+### Is the main task release-readiness, dry-run evidence, or packaging verification?
+- yes -> `openclaw-release`
 - no -> `openclaw-manus`
 
 ## Layering pattern
@@ -75,6 +102,17 @@ A useful pattern is:
 - switch to `openclaw-research` when current-source verification becomes central
 - switch to `openclaw-coding` when implementation changes and validation become the main work
 - switch to `openclaw-docs` when the main work becomes doc review or doc-to-code correction
+- switch to `openclaw-runtime` when the task is mainly about choosing lanes, fallback, runtime layout, or handoff behavior
+- switch to `openclaw-release` when the task becomes release-gating, dry-run review, or packaging-evidence work
+
+## Fallback relationship
+
+Use `openclaw-manus` as the general fallback when:
+- the task is mixed or still being discovered
+- multiple lanes are active at once
+- a specialized skill finishes its narrow role and the task returns to broader execution
+
+`openclaw-runtime` and `openclaw-release` are usually not the first skill for a brand-new user task. They are support-specialized skills that become valuable once routing or release-readiness is the dominant problem.
 
 ## Future direction
 

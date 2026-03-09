@@ -8,6 +8,10 @@ Columns:
 - **归属**: product / runtime / skill / docs / benchmark / scripts
 - **复杂度**: S / M / L
 - **完成定义**: concrete done condition
+- **状态**: todo / in-progress / done / superseded (added when the item is already triaged)
+- **Execution Venue**: this repo / OpenClaw core / runtime host / cross-repo (added when needed to avoid misrouting work)
+- **Maps to**: requirement IDs such as `R11`
+- **Landed in**: commit and primary file(s) for items already completed
 
 ---
 
@@ -32,6 +36,10 @@ Columns:
 - **完成定义**：核心 skill references 出现 blocked format
 
 ### B04. Create channel health model doc (inbound/outbound/auth/webhook-polling)
+- **状态**：done
+- **Execution Venue**：this repo
+- **Maps to**：R11
+- **Landed in**：`083ba06` (`docs/channel-health-model.md`) 
 - **解决什么反馈**：Bot 在线但收不到消息
 - **归属**：runtime/docs
 - **复杂度**：M
@@ -44,6 +52,10 @@ Columns:
 - **完成定义**：新增 benchmark result example + troubleshooting guide section
 
 ### B06. Add tool exposure smoke-test checklist
+- **状态**：done
+- **Execution Venue**：this repo
+- **Maps to**：R13, R20
+- **Landed in**：`083ba06` (`docs/tool-exposure-smoke-test.md`, `scripts/smoke_test_tool_exposure.sh`) 
 - **解决什么反馈**：只会说不会做 / silent fallback
 - **归属**：benchmark/scripts
 - **复杂度**：M
@@ -56,6 +68,10 @@ Columns:
 - **完成定义**：定义统一 warning wording 并在 examples 中出现
 
 ### B08. Add touched-files / touched-systems reporting spec
+- **状态**：done
+- **Execution Venue**：this repo
+- **Maps to**：R19, R8
+- **Landed in**：`083ba06` (`docs/touched-scope-reporting.md`) 
 - **解决什么反馈**：blast radius 不清楚
 - **归属**：skill/runtime
 - **复杂度**：M
@@ -68,6 +84,10 @@ Columns:
 - **完成定义**：runtime/release/ops skill 均带 confirm-before-risk pattern
 
 ### B10. Add rollback-path section to coding/ops/release outputs
+- **状态**：done
+- **Execution Venue**：this repo
+- **Maps to**：R8
+- **Landed in**：`326a5ab` (`skills/openclaw-coding/references/validation-patterns.md`, `skills/openclaw-ops/references/validation-patterns.md`, `skills/openclaw-release/references/release-loop.md`) 
 - **解决什么反馈**：改坏了不知道怎么退
 - **归属**：skill
 - **复杂度**：M
@@ -88,6 +108,10 @@ Columns:
 - **完成定义**：新增 observability summary 模板
 
 ### B13. Add provider error taxonomy doc
+- **状态**：done
+- **Execution Venue**：this repo
+- **Maps to**：R15, R12
+- **Landed in**：`083ba06` (`docs/provider-error-taxonomy.md`) 
 - **解决什么反馈**：429/auth/config/upstream 错误混淆
 - **归属**：docs/runtime
 - **复杂度**：M

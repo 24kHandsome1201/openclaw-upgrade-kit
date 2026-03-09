@@ -31,6 +31,8 @@ Use it as the default because it is the broadest execution-oriented skill.
 | latest-info or comparison task | `openclaw-research` | strongest source/freshness/evidence discipline |
 | implementation or repo change | `openclaw-coding` | strongest inspect-edit-validate workflow |
 | README/setup/runbook review | `openclaw-docs` | strongest doc-to-code validation discipline |
+| routing/fallback/layout-selection task | `openclaw-runtime` | strongest routing, handoff, and runtime-layout guidance |
+| release-readiness / dry-run / packaging-check task | `openclaw-release` | strongest release evidence and gating discipline |
 
 ## Transition rules
 
@@ -44,6 +46,8 @@ Examples:
 - the next step is checking current docs or public sources -> `openclaw-research`
 - the next step is patching code and validating it -> `openclaw-coding`
 - the next step is verifying README/setup drift -> `openclaw-docs`
+- the next step is deciding which skill should own the task or how fallback should work -> `openclaw-runtime`
+- the next step is gathering release evidence or judging dry-run readiness -> `openclaw-release`
 
 ## Return-to-default rule
 
@@ -78,6 +82,18 @@ Use:
 1. `openclaw-research` to verify current public facts
 2. `openclaw-docs` to correct internal docs or README text
 
+### Manus -> Runtime
+Use:
+1. `openclaw-manus` while the task is still mixed
+2. `openclaw-runtime` when the main issue becomes routing choice, fallback policy, or host-layout design
+3. `openclaw-manus` again if runtime guidance is only one part of a broader execution task
+
+### Manus -> Release
+Use:
+1. `openclaw-manus` while producing or validating deliverables
+2. `openclaw-release` when the main work becomes release gating, dry-run review, or evidence packaging
+3. `openclaw-manus` again if release work broadens back into mixed execution
+
 ## Routing signals by evidence source
 
 Use the dominant evidence source to help choose the skill:
@@ -86,7 +102,15 @@ Use the dominant evidence source to help choose the skill:
 - current web/official docs/sources -> `openclaw-research`
 - repo files/tests/build output -> `openclaw-coding`
 - README/setup/runbook text checked against implementation -> `openclaw-docs`
+- routing rules / fallback state / host-layout choice -> `openclaw-runtime`
+- release evidence / dry-run artifacts / archive checks -> `openclaw-release`
 - mixed evidence sources with broad task flow -> `openclaw-manus`
+
+## Starting-set vs full-set note
+
+The recommended starting skills are not the same as the full packaged skill set:
+- start most user tasks with `openclaw-manus` plus the domain skills
+- treat `openclaw-runtime` and `openclaw-release` as advanced/specialized support skills when routing or release gating becomes the dominant lane
 
 ## Minimal runtime policy
 
@@ -103,5 +127,6 @@ A lightweight runtime can still follow a useful routing policy:
 A routing policy is working well when:
 - specialized tasks consistently land on the matching skill
 - mixed tasks do not get over-routed too early
+- runtime/release support tasks no longer get forced into generic lanes
 - a task can switch lanes without losing structure
 - output quality improves in the matching benchmark category

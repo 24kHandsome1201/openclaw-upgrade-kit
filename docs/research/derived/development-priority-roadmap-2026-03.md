@@ -2,6 +2,9 @@
 
 _Source report: `docs/research/agent-product-feedback-report-2026-03.md`_
 
+This document is the **current execution-priority roadmap**.
+Use `docs/roadmap-10-phases.md` as the historical / long-horizon evolution map, not as the day-to-day execution source.
+
 ## Goal
 Turn cross-product feedback into a practical roadmap for:
 - OpenClaw main product

@@ -9,6 +9,7 @@ Each requirement is structured as:
 - **目标用户**
 - **为什么重要**
 - **建议优先级**
+- **Execution Venue**
 - **可验证交付物**
 
 This file is intended to convert public market feedback into development-ready requirements, not to repeat the report.
@@ -23,6 +24,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：所有 OpenClaw 用户，尤其是 coding / ops / research / release 用户。
 - **为什么重要**：这是跨产品最强共识之一，直接决定信任感。
 - **建议优先级**：P0
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - 标准输出结构在核心 skill 中默认启用
   - 至少 4 类 benchmark 验证“进度可见”
@@ -34,6 +36,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：ops / research / docs / release 场景用户。
 - **为什么重要**：可直接降低错误信心与误导。
 - **建议优先级**：P0
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - 输出模板中固定有 validation wording
   - benchmark rubric 加入 fact-vs-inference 评分项
@@ -45,6 +48,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：长任务、多步任务用户。
 - **为什么重要**：提升 agentic 感，同时避免自治失控。
 - **建议优先级**：P1
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - continue-by-default 行为模板
   - checkpoint / progress 输出样例
@@ -60,6 +64,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：进阶用户、团队用户、复杂工作流用户。
 - **为什么重要**：模式混乱会导致执行边界不清、输出风格不稳定。
 - **建议优先级**：P0
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - 路由文档与 skill matrix 一致
   - 至少 6 个专门 skill 或子模式
@@ -71,6 +76,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：所有使用多 skill 的用户。
 - **为什么重要**：提升可控感，降低“怎么突然变了”的疑惑。
 - **建议优先级**：P1
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - fallback policy 文档
   - runtime routing examples
@@ -82,6 +88,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：ops、release、runtime 用户。
 - **为什么重要**：这是 bounded autonomy 的关键。
 - **建议优先级**：P0
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - destructive-action checklist
   - stop/ask policy 文档
@@ -97,6 +104,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：所有长任务用户，尤其是 release / research / ops。
 - **为什么重要**：长任务恢复能力是 agent 从 demo 变产品的关键。
 - **建议优先级**：P0
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - checkpoint template
   - resume / recovery guide
@@ -108,6 +116,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：coding / ops / docs / release 用户。
 - **为什么重要**：这是 trust-first execution 的基本保障。
 - **建议优先级**：P0
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - 修改前备份说明
   - rollback section in outputs
@@ -119,6 +128,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：所有用户。
 - **为什么重要**：失败体验直接决定是否继续使用。
 - **建议优先级**：P1
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - blocked format 模板
   - 至少 3 个 blocked examples
@@ -134,6 +144,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：非纯 CLI 用户；团队协作用户；聊天入口用户。
 - **为什么重要**：对 OpenClaw 这类产品，入口体验就是产品体验。
 - **建议优先级**：P0（产品侧）
+- **Execution Venue**：OpenClaw core
 - **可验证交付物**：
   - 每个主流渠道的安装/排障文档
   - first-install channel options 设计稿或实现
@@ -145,6 +156,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：Telegram 等聊天入口用户。
 - **为什么重要**：能大幅降低 silent failure。
 - **建议优先级**：P0（产品/runtime）
+- **Execution Venue**：OpenClaw core
 - **可验证交付物**：
   - channel health model
   - CLI/UI 状态输出
@@ -156,6 +168,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：新用户、运维用户。
 - **为什么重要**：首日体验决定大量流失。
 - **建议优先级**：P1
+- **Execution Venue**：OpenClaw core
 - **可验证交付物**：
   - pairing status command
   - auth diagnostic guide
@@ -171,6 +184,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：coding / ops / runtime 用户。
 - **为什么重要**：agent 的核心承诺是“会执行”。
 - **建议优先级**：P0
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - tool exposure smoke tests
   - capability loss warning format
@@ -182,6 +196,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：插件/渠道用户，集成开发者。
 - **为什么重要**：执行看不见等于没有执行。
 - **建议优先级**：P0
+- **Execution Venue**：cross-repo
 - **可验证交付物**：
   - callback/result visibility docs
   - tool contract validation checks
@@ -193,6 +208,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：所有使用外部模型/provider 的用户。
 - **为什么重要**：用户会拿别的产品对照，如果这里错误更模糊就会被否定。
 - **建议优先级**：P1
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - provider error taxonomy
   - normalized error messages
@@ -208,6 +224,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：重度用户、团队、付费模型用户。
 - **为什么重要**：这是对抗“opaque billing/credit burn”最直接的方法。
 - **建议优先级**：P1
+- **Execution Venue**：runtime host
 - **可验证交付物**：
   - execution summary footer
   - long-task metrics section
@@ -219,6 +236,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：所有 agent 用户，尤其 builder/coding/ops 用户。
 - **为什么重要**：bounded autonomy 不只是文档，而是控制面。
 - **建议优先级**：P1
+- **Execution Venue**：cross-repo
 - **可验证交付物**：
   - stop/ask policy docs
   - release/runtime/coding examples
@@ -230,6 +248,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：非运维用户、聊天入口用户。
 - **为什么重要**：日志是专家接口，不是产品接口。
 - **建议优先级**：P1
+- **Execution Venue**：cross-repo
 - **可验证交付物**：
   - human-readable status blocks
   - concise failure summaries
@@ -245,6 +264,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：所有关心安全与变更边界的用户。
 - **为什么重要**：blast radius 不透明会让人完全不敢用。
 - **建议优先级**：P0
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - touched-files / touched-systems reporting
   - safe mode / full mode distinction
@@ -256,6 +276,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：所有用户，尤其新用户。
 - **为什么重要**：权限不透明 = 安全焦虑。
 - **建议优先级**：P1
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - permission model docs
   - setup examples with explicit exposure
@@ -271,6 +292,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：所有用户，尤其 self-hosting 用户。
 - **为什么重要**：支持能力弱时，文档就是第一线支持。
 - **建议优先级**：P0
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - docs benchmarks 扩展
   - troubleshooting guides
@@ -282,6 +304,7 @@ This file is intended to convert public market feedback into development-ready r
 - **目标用户**：社区贡献者、维护者。
 - **为什么重要**：这是 open upgrade-kit 的长期护城河。
 - **建议优先级**：P1
+- **Execution Venue**：this repo
 - **可验证交付物**：
   - benchmark contribution guide
   - issue/PR templates
