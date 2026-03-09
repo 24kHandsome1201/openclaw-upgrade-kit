@@ -66,6 +66,8 @@ This repo gives an agent a structured way to:
 
 - `skills/openclaw-manus/`
   - a Manus-like execution skill for OpenClaw
+- `skills/openclaw-ops/`
+  - a specialized ops / incident-response skill for OpenClaw
 - planning / execution / reporting references
 - benchmark task definitions
 - before/after examples
@@ -94,14 +96,22 @@ openclaw-upgrade-kit/
 ├── README.md
 ├── LICENSE
 ├── skills/
-│   └── openclaw-manus/
+│   ├── openclaw-manus/
+│   │   ├── SKILL.md
+│   │   ├── references/
+│   │   │   ├── execution-loop.md
+│   │   │   ├── tool-selection-policy.md
+│   │   │   ├── reporting-format.md
+│   │   │   ├── task-patterns.md
+│   │   │   └── examples.md
+│   │   └── agents/
+│   │       └── openai.yaml
+│   └── openclaw-ops/
 │       ├── SKILL.md
 │       ├── references/
-│       │   ├── execution-loop.md
-│       │   ├── tool-selection-policy.md
-│       │   ├── reporting-format.md
-│       │   ├── task-patterns.md
-│       │   └── examples.md
+│       │   ├── incident-loop.md
+│       │   ├── ops-checklist.md
+│       │   └── validation-patterns.md
 │       └── agents/
 │           └── openai.yaml
 ├── benchmarks/
@@ -123,18 +133,13 @@ openclaw-upgrade-kit/
     └── before-after-research.md
 ```
 
-## First skill: `openclaw-manus`
+## Included skills
 
-The first skill in this repo is a Manus-like behavior upgrade for OpenClaw.
+### `openclaw-manus`
+A general execution-upgrade skill for planning, tool use, evidence gathering, progress reporting, and delivery.
 
-It focuses on:
-
-- task framing
-- decomposition
-- tool-use discipline
-- evidence collection
-- progress reporting
-- result delivery
+### `openclaw-ops`
+A specialized ops skill for runtime troubleshooting, log inspection, config validation, and safe corrective actions.
 
 ## Benchmarks
 
