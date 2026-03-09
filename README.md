@@ -178,3 +178,11 @@ Contributions are welcome, especially in:
 ## License
 
 This repository is released under the MIT License.
+
+
+## Additional docs
+
+- `docs/installation-and-usage.md`
+- `docs/openclaw-integration.md`
+- `docs/github-launch-kit.md`
+- `docs/release-notes-v0.1.0.md`
