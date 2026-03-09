@@ -68,10 +68,11 @@ This project focuses on that gap.
 4. `benchmarks/results/`
 
 ### Path 4: I want release / packaging workflow
-1. `docs/versioned-installation-notes.md`
-2. `docs/packaging-plan.md`
-3. `docs/release-archive-workflow.md`
-4. `docs/release-checklist.md`
+1. `docs/release-playbook.md`
+2. `docs/versioned-installation-notes.md`
+3. `docs/packaging-plan.md`
+4. `docs/release-archive-workflow.md`
+5. `docs/release-checklist.md`
 
 ### Path 5: I maintain this repo and need the planning inputs
 1. `docs/research/agent-product-feedback-report-2026-03.md`
@@ -111,6 +112,8 @@ This project focuses on that gap.
 | `scripts/smoke_test_release.sh` | release smoke-test helper | `./scripts/smoke_test_release.sh` |
 | `scripts/smoke_test_tool_exposure.sh` | trust-first repo smoke test for packaged skills/docs/scripts | `./scripts/smoke_test_tool_exposure.sh` |
 | `scripts/check_doc_paths.py` | lightweight checker for repo-relative Markdown path references | `./scripts/check_doc_paths.py` |
+| `scripts/backlog_status_report.py` | summarize backlog status, execution venue, and landed items | `./scripts/backlog_status_report.py` |
+| `scripts/repo_health_check.sh` | quick maintainer repo health check | `./scripts/repo_health_check.sh` |
 
 ---
 
@@ -151,8 +154,10 @@ This project focuses on that gap.
 - `docs/tool-exposure-smoke-test.md`
 - `docs/touched-scope-reporting.md`
 - `docs/doc-path-lint.md`
+- `docs/repo-health-check.md`
 
 ### Packaging and release
+- `docs/release-playbook.md`
 - `docs/versioned-installation-notes.md`
 - `docs/packaging-plan.md`
 - `docs/release-archive-workflow.md`
@@ -178,6 +183,7 @@ This project focuses on that gap.
 - `docs/research/derived/development-priority-roadmap-2026-03.md`
 - `docs/research/derived/executable-backlog-from-feedback-2026-03.md`
 - `docs/skill-reference-taxonomy.md`
+- `docs/backlog-status-sync.md`
 
 ---
 
