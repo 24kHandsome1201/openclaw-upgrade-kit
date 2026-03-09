@@ -17,9 +17,9 @@ It is meant to answer:
 - Dry-run date: 2026-03-09
 - Reference used for helper checks: `HEAD`
 - Version info observed during dry run:
-  - tag: `v0.1.0-10-g9edbf54`
+  - tag: `v0.1.0-11-g957a9d2`
   - branch: `master`
-  - commit: `9edbf54`
+  - commit: `957a9d2`
 
 ## Commands run
 
@@ -60,7 +60,7 @@ It is meant to answer:
 - **Status:** Pass
 
 ### 4. Release preparation helper
-- **Command:** `./scripts/prepare_release.sh HEAD /tmp/openclaw-v011-prepare`
+- **Command:** `./scripts/prepare_release.sh HEAD /tmp/openclaw-v011-prepare-clean`
 - **Observed result:** completed successfully and printed:
   - repo status
   - version info
@@ -71,14 +71,11 @@ It is meant to answer:
 
 ## Issues observed during dry run
 
-### [Medium] Working tree was not clean during release prep
-- **Evidence:** `prepare_release.sh` showed pending changes in:
-  - `skills/openclaw-ops/SKILL.md`
-  - `skills/openclaw-research/SKILL.md`
-  - `skills/openclaw-ops/references/working-mode.md`
-  - `skills/openclaw-research/references/working-mode.md`
-- **Impact:** release prep output reflects a not-yet-finalized repo state.
-- **Recommended action:** complete review/integration of those changes before tagging `v0.1.1`.
+No blocking issues were observed in the clean rerun.
+
+Minor residual risks remain at the project level:
+- `v0.1.1` is still documentation-and-script heavy rather than runtime-embedded
+- benchmark breadth is much stronger, but still not exhaustive across all real-world scenarios
 
 ## Readiness summary
 
@@ -89,21 +86,18 @@ It is meant to answer:
 - release prep helper provides a useful summary path
 
 ### What still needs attention
-- working tree must be clean before actual release tagging
-- final release notes should be checked once the pending skill changes are integrated
-- final version info should be captured again after the intended release commit is ready
+- final release notes should be checked one more time immediately before tagging
+- final version info should be captured again after the intended release tag exists
 
 ## Dry-run verdict
 
-- **Verdict:** Pass with Risks
-- **Release-ready now?:** Not yet
-- **Reason:** helper scripts and packaging path are working, but the repository state was not clean during the dry run
+- **Verdict:** Pass
+- **Release-ready now?:** Yes, pending final tag decision
+- **Reason:** helper scripts, packaging path, and release prep flow all completed successfully on a clean working tree
 
 ## Recommended next steps
 
-1. integrate or reject the pending `openclaw-ops` / `openclaw-research` working-mode changes
-2. rerun:
-   - `./scripts/smoke_test_release.sh /tmp/openclaw-v011-dry-run HEAD`
-   - `./scripts/prepare_release.sh HEAD /tmp/openclaw-v011-prepare`
-3. confirm `docs/release-notes-v0.1.1.md` still matches the final repo state
-4. tag `v0.1.1` only after the repo is clean and the dry run remains green
+1. do one final release-notes sanity check against the current repo tree
+2. capture final version info again after the intended release tag exists
+3. tag `v0.1.1`
+4. publish release notes from `docs/release-notes-v0.1.1.md`
