@@ -14,3 +14,13 @@ For non-trivial releases, prefer including:
 - packaging helper checks
 - version info capture
 - dry-run report
+
+For release work that changes packaging, install flow, docs, or verification assets, also include:
+- rollback path for the release-ready state
+- what tag/doc/script state would be restored
+- what verification should be rerun after rollback
+
+Preferred release rollback summary:
+- release artifact or doc affected
+- how to revert to the last known-good release state
+- what smoke/dry-run checks to rerun

@@ -15,6 +15,7 @@
 - inspects config and identifies likely policy errors
 - applies the smallest safe fix after backup
 - validates config syntax and service state after restart
+- includes a rollback hint to return to the last known-good config or service state
 - distinguishes confirmed facts from remaining hypotheses
 
 ## Behavioral difference

@@ -15,6 +15,7 @@
 - proposes a short plan and immediately executes the first safe step
 - applies the smallest useful fix
 - validates with build/test/check output where possible
+- includes a brief rollback path for the changed file or patch when the fix affects behavior
 - ends with a concrete summary and next cleanup option
 
 ## Behavioral difference
