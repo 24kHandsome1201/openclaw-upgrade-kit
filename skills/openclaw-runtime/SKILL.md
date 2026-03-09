@@ -51,3 +51,4 @@ If needed, read:
 - `references/manual-routing-patterns.md`
 - `references/layout-selection.md`
 - `references/working-mode.md` for staged, verifiable, and delegatable execution mode
+- `../../docs/delegation-patterns.md` for parent-agent/sub-agent delegation patterns and scoped handoff design

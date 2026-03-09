@@ -18,6 +18,8 @@ The goal is to make behavioral improvement visible and reviewable.
 ## Current examples
 
 - `benchmarks/results/research-example.md`
+- `benchmarks/results/research-pricing-spec-change-example.md`
+- `benchmarks/results/research-api-docs-verification-example.md`
 - `benchmarks/results/coding-example.md`
 - `benchmarks/results/coding-build-failure-example.md`
 - `benchmarks/results/coding-ci-config-failure-example.md`
@@ -29,6 +31,8 @@ The goal is to make behavioral improvement visible and reviewable.
 - `benchmarks/results/ops-webhook-misconfig-example.md`
 - `benchmarks/results/ops-stale-process-example.md`
 - `benchmarks/results/docs-example.md`
+- `benchmarks/results/docs-architecture-consistency-example.md`
+- `benchmarks/results/docs-onboarding-setup-example.md`
 - `benchmarks/results/long-task-example.md`
 
 ## Recommendation
@@ -44,5 +48,9 @@ As the repo grows, keep one result file per benchmark category:
 - ops / webhook-misconfiguration
 - ops / stale-process-cleanup
 - research
+- research / api-docs-verification
+- research / pricing-spec-change
 - docs
+- docs / onboarding-setup
+- docs / architecture-consistency
 - long-task / resume

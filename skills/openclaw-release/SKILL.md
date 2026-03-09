@@ -51,3 +51,4 @@ If needed, read:
 - `references/release-check-boundaries.md`
 - `references/evidence-requirements.md`
 - `references/working-mode.md` for staged, verifiable, and delegatable execution mode
+- `../../docs/delegation-patterns.md` for parent-agent/sub-agent delegation patterns and scoped release verification handoffs
