@@ -242,9 +242,9 @@ The project now has a staged roadmap with explicit goals, dependencies, and veri
 - `docs/roadmap-10-phases.md` — 10 development phases with goals, scope, deliverables, acceptance criteria, and dependency notes
 
 Current near-term focus:
-- runtime integration patterns
-- long-task / checkpoint / recovery patterns
-- packaging/version clarity
+- community benchmark contribution flow
+- release/evaluation discipline
+- long-task benchmark examples
 
 ## Contributing
 
@@ -276,8 +276,12 @@ This repository is released under the MIT License.
 - `docs/fallback-policy.md`
 - `docs/benchmark-results-guide.md`
 - `docs/long-task-patterns.md`
+- `docs/long-task-example.md`
 - `docs/checkpoint-template.md`
 - `docs/resume-recovery-guide.md`
+- `docs/benchmark-contribution-guide.md`
+- `docs/release-checklist.md`
+- `docs/evaluation-cadence.md`
 - `benchmarks/results/template.md`
 - `benchmarks/results/research-example.md`
 - `benchmarks/results/coding-example.md`
@@ -302,5 +306,10 @@ Then review:
 - `docs/fallback-policy.md`
 - `docs/benchmark-results-guide.md`
 - `docs/long-task-patterns.md`
+- `docs/long-task-example.md`
 - `docs/checkpoint-template.md`
 - `docs/resume-recovery-guide.md`
+- `docs/benchmark-contribution-guide.md`
+- `docs/release-checklist.md`
+- `docs/evaluation-cadence.md`
+- `docs/long-task-example.md`

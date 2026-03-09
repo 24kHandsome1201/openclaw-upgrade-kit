@@ -21,6 +21,7 @@ The goal is to make behavioral improvement visible and reviewable.
 - `benchmarks/results/coding-example.md`
 - `benchmarks/results/ops-example.md`
 - `benchmarks/results/docs-example.md`
+- `benchmarks/results/long-task-example.md`
 
 ## Recommendation
 
@@ -29,3 +30,4 @@ As the repo grows, keep one result file per benchmark category:
 - ops
 - research
 - docs
+- long-task / resume
