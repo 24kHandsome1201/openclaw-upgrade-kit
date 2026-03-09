@@ -48,3 +48,4 @@ If needed, read:
 - `references/coding-loop.md`
 - `references/diff-strategy.md`
 - `references/validation-patterns.md`
+- `references/working-mode.md`

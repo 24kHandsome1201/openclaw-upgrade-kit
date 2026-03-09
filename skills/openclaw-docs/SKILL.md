@@ -48,3 +48,4 @@ If needed, read:
 - `references/doc-review-loop.md`
 - `references/drift-checklist.md`
 - `references/validation-boundaries.md`
+- `references/working-mode.md`

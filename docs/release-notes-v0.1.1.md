@@ -17,10 +17,10 @@ This release grows the project from an initial execution-upgrade MVP into a broa
 - added `openclaw-research`
 - added `openclaw-coding`
 - added `openclaw-docs`
-- added benchmark result examples for research, coding, ops, docs, and long-task flows
-- added local packaging helpers for listing, selective install, version reporting, tag-based install, and release archive creation
-- added runtime routing, fallback, and manual-routing documentation
-- added long-task, checkpoint, resume, and recovery guidance
+- added benchmark result examples for research, coding, ops, docs, and long-task flows, including subtype cases for build failure, small refactor, runbook review, release-note review, conflict, and misconfiguration
+- added local packaging helpers for listing, selective install, version reporting, tag-based install, release archive creation, and pre-release smoke testing
+- added runtime routing, fallback, manual-routing documentation, and concrete runtime layout examples
+- added long-task, checkpoint, resume, and recovery guidance plus a working-mode pattern for staged, verifiable, delegatable execution
 - added benchmark contribution, release-readiness, and evaluation-cadence documentation
 
 ## Core idea
@@ -68,6 +68,7 @@ This release adds or strengthens:
 - benchmark contribution guide
 - release checklist tied to measurable repository state
 - evaluation cadence guidance
+- PR / issue templates for benchmark and skill proposals
 
 ## Packaging and runtime improvements
 
@@ -78,11 +79,14 @@ This release adds or strengthens:
 - `print_version_info.sh`
 - `install_from_tag.sh`
 - `create_release_archive.sh`
+- `prepare_release.sh`
+- `smoke_test_release.sh`
 - runtime routing patterns
 - default vs specialized routing guidance
 - fallback policy
 - runtime integration examples
 - manual routing playbook
+- runtime layout examples
 
 ## Long-task continuity improvements
 
@@ -92,6 +96,7 @@ This release adds or strengthens:
 - resume / recovery guidance
 - long-task example
 - long-task benchmark example
+- working-mode reference for staged and review-before-integration execution
 
 ## Known limitations
 
@@ -104,7 +109,7 @@ This release still does not provide:
 
 ## Suggested next steps
 
-- add more host-specific runtime layout examples
-- expand benchmark evidence with more real-world scenarios
-- add release automation and pre-release smoke-test helpers
-- continue turning stable documentation workflows into reusable skills or templates
+- continue expanding host-specific runtime layout examples
+- expand benchmark evidence with more real-world scenarios and subtypes
+- extend working-mode patterns to more specialized skills
+- keep release automation transparent rather than over-automated

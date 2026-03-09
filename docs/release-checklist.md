@@ -50,6 +50,7 @@ A good release should have:
 - [ ] `scripts/install_from_tag.sh` works when testing a local tag
 - [ ] `scripts/create_release_archive.sh` works
 - [ ] `scripts/smoke_test_release.sh` works
+- [ ] `scripts/prepare_release.sh` works
 
 ## Release note readiness
 

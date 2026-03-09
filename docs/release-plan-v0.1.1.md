@@ -33,24 +33,28 @@ into:
 - `openclaw-docs`
 
 ### Benchmark and evaluation
-- benchmark result examples for coding / ops / docs / long-task
+- benchmark result examples for coding / ops / docs / long-task, including subtype cases
 - benchmark contribution guide
 - evaluation cadence guidance
 - release checklist improvements
+- community contribution templates
 
 ### Packaging and runtime
 - selective install / list / version scripts
 - tag-based install support
 - release archive workflow
+- prepare/smoke-test release helpers
 - runtime routing patterns
 - manual routing playbook
 - runtime integration examples
+- runtime layout examples
 
 ### Long-task support
 - long-task patterns
 - checkpoint template
 - resume / recovery guide
 - long-task example
+- working-mode reference in the core execution skill
 
 ## Recommended release checklist focus
 
@@ -58,6 +62,7 @@ Before tagging `v0.1.1`, verify:
 - README reflects the current skill set and doc map
 - install/list/version scripts work as documented
 - tag/archive workflows work as documented
+- release helper scripts work as documented
 - benchmark result examples referenced by docs actually exist
 - routing docs and integration docs remain internally consistent
 - release notes match the real repository contents
@@ -71,6 +76,8 @@ Before tagging `v0.1.1`, verify:
 ./scripts/print_version_info.sh
 ./scripts/install_from_tag.sh v0.1.0 /tmp/openclaw-v011-from-tag
 ./scripts/create_release_archive.sh HEAD /tmp/openclaw-v011-archive
+./scripts/smoke_test_release.sh /tmp/openclaw-v011-smoke HEAD
+./scripts/prepare_release.sh HEAD /tmp/openclaw-v011-prepare
 ```
 
 ## Suggested release artifacts
@@ -81,9 +88,9 @@ Before tagging `v0.1.1`, verify:
 
 ## Known release risks
 
-- README may need one more pass to keep pace with the growing docs tree
-- packaging automation is stronger than before, but still not host-specific
-- some future automation helpers may land after this release and should not be claimed early
+- packaging automation is stronger than before, but still not host-specific automation
+- the release remains documentation-and-script heavy rather than runtime-embedded
+- benchmark breadth is much better, but still not exhaustive across all real-world scenarios
 
 ## Notable difference from v0.1.0
 

@@ -70,3 +70,14 @@ This makes benchmark results easier to trust and reproduce.
 ```bash
 ./scripts/create_release_archive.sh v0.1.0
 ```
+
+## Pre-release verification helpers
+
+For release preparation on the current working tree, use:
+
+```bash
+./scripts/smoke_test_release.sh /tmp/openclaw-release-smoke HEAD
+./scripts/prepare_release.sh HEAD /tmp/openclaw-release-prepare
+```
+
+These are local validation helpers, not publishing commands.
