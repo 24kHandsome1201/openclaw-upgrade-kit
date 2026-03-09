@@ -23,7 +23,7 @@ into:
 
 ## Proposed release summary
 
-`v0.1.1` expands `openclaw-upgrade-kit` with new specialized skills, richer benchmark examples, packaging/runtime integration guidance, long-task continuity patterns, and community/release evaluation docs.
+`v0.1.1` expands `openclaw-upgrade-kit` with new specialized skills, richer benchmark examples, packaging/runtime integration guidance, long-task continuity patterns, release-specific operational guidance, and stronger community/evaluation docs.
 
 ## Scope
 
@@ -31,9 +31,11 @@ into:
 - `openclaw-research`
 - `openclaw-coding`
 - `openclaw-docs`
+- `openclaw-runtime`
+- `openclaw-release`
 
 ### Benchmark and evaluation
-- benchmark result examples for coding / ops / docs / long-task, including subtype cases
+- benchmark result examples for coding / ops / docs / research / long-task, including subtype cases
 - benchmark contribution guide
 - evaluation cadence guidance
 - release checklist improvements
@@ -48,26 +50,28 @@ into:
 - manual routing playbook
 - runtime integration examples
 - runtime layout examples
+- release dry-run summary
 
 ### Long-task support
 - long-task patterns
 - checkpoint template
 - resume / recovery guide
 - long-task example
-- working-mode reference in the core execution skill
+- working-mode references across core and specialized skills
+- delegation patterns guidance
 
-## Recommended release checklist focus
+## Release checklist focus
 
-Before tagging `v0.1.1`, verify:
-- README reflects the current skill set and doc map
+For final publication of `v0.1.1`, verify:
+- release notes match the current skill set and doc/script inventory
 - install/list/version scripts work as documented
 - tag/archive workflows work as documented
 - release helper scripts work as documented
-- benchmark result examples referenced by docs actually exist
-- routing docs and integration docs remain internally consistent
-- release notes match the real repository contents
+- benchmark result examples referenced by docs exist
+- routing docs, runtime docs, and release docs remain internally consistent
+- the release summary points to the existing dry-run artifacts and tag state correctly
 
-## Suggested pre-release verification commands
+## Suggested verification commands
 
 ```bash
 ./scripts/list_packaged_skills.sh
@@ -85,13 +89,21 @@ Before tagging `v0.1.1`, verify:
 - Git tag: `v0.1.1`
 - GitHub release title: `v0.1.1 - Skills, routing, packaging, and evaluation expansion`
 - Release notes source: `docs/release-notes-v0.1.1.md`
-- Dry-run reference: `docs/release-dry-run-report-v0.1.1.md`
+- Dry-run references:
+  - `docs/release-dry-run-report-v0.1.1.md`
+  - `docs/release-dry-run-summary-v0.1.1.md`
 
 ## Known release risks
 
 - packaging automation is stronger than before, but still not host-specific automation
 - the release remains documentation-and-script heavy rather than runtime-embedded
 - benchmark breadth is much better, but still not exhaustive across all real-world scenarios
+
+## Current release status
+
+- tag exists: `v0.1.1`
+- clean dry-run verdict: `Pass`
+- next publish action: create/update the GitHub release body from `docs/release-notes-v0.1.1.md`
 
 ## Notable difference from v0.1.0
 

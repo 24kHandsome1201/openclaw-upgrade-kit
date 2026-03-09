@@ -17,10 +17,12 @@ This release grows the project from an initial execution-upgrade MVP into a broa
 - added `openclaw-research`
 - added `openclaw-coding`
 - added `openclaw-docs`
-- added benchmark result examples for research, coding, ops, docs, and long-task flows, including subtype cases for build failure, small refactor, runbook review, release-note review, conflict, and misconfiguration
-- added local packaging helpers for listing, selective install, version reporting, tag-based install, release archive creation, and pre-release smoke testing
-- added runtime routing, fallback, manual-routing documentation, and concrete runtime layout examples
-- added long-task, checkpoint, resume, and recovery guidance plus a working-mode pattern for staged, verifiable, delegatable execution
+- added `openclaw-runtime`
+- added `openclaw-release`
+- added benchmark result examples for research, coding, ops, docs, and long-task flows, including subtype cases for build failure, CI config failure, small refactor, flaky test, runbook review, release-note review, onboarding/setup drift, architecture consistency, conflict, misconfiguration, webhook misconfiguration, stale process cleanup, API/docs verification, and pricing/spec-change verification
+- added local packaging helpers for listing, selective install, version reporting, tag-based install, release archive creation, release preparation, and pre-release smoke testing
+- added runtime routing, fallback, manual-routing documentation, delegation patterns, and concrete runtime layout examples
+- added long-task, checkpoint, resume, and recovery guidance plus working-mode patterns for staged, verifiable, delegatable execution across the core and specialized skills
 - added benchmark contribution, release-readiness, and evaluation-cadence documentation
 
 ## Core idea
@@ -38,7 +40,7 @@ This release makes the repository substantially more usable as:
 Compared with `v0.1.0`, the project now has much better coverage for:
 - specialized task routing
 - coding and documentation workflows
-- runtime integration patterns
+- runtime integration and release-handling patterns
 - long-task continuity
 - contribution and release discipline
 
@@ -59,12 +61,19 @@ Specialized coding skill for repo inspection, minimal diffs, implementation chan
 ### `openclaw-docs`
 Specialized documentation skill for README/setup/runbook review, doc-to-code drift detection, and correction planning.
 
+### `openclaw-runtime`
+Specialized runtime skill for routing, fallback, runtime layout selection, and orchestration-lite integration guidance.
+
+### `openclaw-release`
+Specialized release skill for release checks, evidence gathering, dry-run interpretation, and publish-readiness framing.
+
 ## Benchmark and evaluation improvements
 
 This release adds or strengthens:
 - benchmark result template
 - benchmark results guide
 - result examples for research / coding / ops / docs / long-task
+- deeper subtype examples across coding, ops, docs, and research scenarios
 - benchmark contribution guide
 - release checklist tied to measurable repository state
 - evaluation cadence guidance
@@ -87,6 +96,7 @@ This release adds or strengthens:
 - runtime integration examples
 - manual routing playbook
 - runtime layout examples
+- release dry-run report and release dry-run summary
 
 ## Long-task continuity improvements
 
@@ -96,7 +106,8 @@ This release adds or strengthens:
 - resume / recovery guidance
 - long-task example
 - long-task benchmark example
-- working-mode reference for staged and review-before-integration execution
+- working-mode references for staged and review-before-integration execution
+- delegation patterns for subtasking and parent-agent acceptance
 
 ## Known limitations
 
@@ -111,5 +122,5 @@ This release still does not provide:
 
 - continue expanding host-specific runtime layout examples
 - expand benchmark evidence with more real-world scenarios and subtypes
-- extend working-mode patterns to more specialized skills
+- extend working-mode and delegation patterns where specialized skills need them most
 - keep release automation transparent rather than over-automated
