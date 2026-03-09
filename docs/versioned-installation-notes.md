@@ -4,8 +4,10 @@ This document describes how to install `openclaw-upgrade-kit` in a version-aware
 
 ## Current release baseline
 
-Current tagged baseline:
-- `v0.1.0`
+Current recommended stable tag:
+- `v0.1.1`
+
+Older tags such as `v0.1.0` remain useful for historical comparison, but `v0.1.1` is the current stable baseline in this repository.
 
 If you want stable installation behavior, prefer checking out a tag instead of a moving branch.
 
@@ -14,7 +16,7 @@ If you want stable installation behavior, prefer checking out a tag instead of a
 ```bash
 git clone git@github.com:24kHandsome1201/openclaw-upgrade-kit.git
 cd openclaw-upgrade-kit
-git checkout v0.1.0
+git checkout v0.1.1
 ./scripts/install_local_skills.sh ~/.codex/skills
 ```
 
@@ -62,13 +64,13 @@ This makes benchmark results easier to trust and reproduce.
 ## Install directly from an existing local tag
 
 ```bash
-./scripts/install_from_tag.sh v0.1.0 ~/.codex/skills
+./scripts/install_from_tag.sh v0.1.1 ~/.codex/skills
 ```
 
 ## Create a release archive
 
 ```bash
-./scripts/create_release_archive.sh v0.1.0
+./scripts/create_release_archive.sh v0.1.1
 ```
 
 ## Pre-release verification helpers

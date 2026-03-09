@@ -25,7 +25,9 @@ These examples do **not** assume any hidden automation beyond what already exist
 ├── openclaw-ops/
 ├── openclaw-research/
 ├── openclaw-coding/
-└── openclaw-docs/
+├── openclaw-docs/
+├── openclaw-runtime/
+└── openclaw-release/
 ```
 
 ### Install commands
@@ -45,6 +47,7 @@ cd ~/projects/openclaw-upgrade-kit
 
 ### What to verify
 - `~/.codex/skills` exists after install
+- all 7 packaged skills were copied
 - each installed skill contains `SKILL.md`
 - each installed skill contains `references/`
 - each installed skill contains `agents/openai.yaml`
@@ -110,7 +113,9 @@ A common subset is:
 ├── openclaw-ops/
 ├── openclaw-research/
 ├── openclaw-coding/
-└── openclaw-docs/
+├── openclaw-docs/
+├── openclaw-runtime/
+└── openclaw-release/
 ```
 
 ### Install commands
@@ -119,14 +124,14 @@ Install from a known local tag:
 
 ```bash
 cd ~/shared/openclaw-upgrade-kit
-./scripts/install_from_tag.sh v0.1.0 ~/shared/agent-skills
+./scripts/install_from_tag.sh v0.1.1 ~/shared/agent-skills
 ```
 
 Or install only a small team subset:
 
 ```bash
 cd ~/shared/openclaw-upgrade-kit
-./scripts/install_from_tag.sh v0.1.0 ~/shared/agent-skills openclaw-manus openclaw-ops openclaw-docs
+./scripts/install_from_tag.sh v0.1.1 ~/shared/agent-skills openclaw-manus openclaw-ops openclaw-docs
 ```
 
 ### Skill selection suggestion
@@ -137,7 +142,7 @@ Use this layout when the team wants:
 
 ### What to verify
 - the requested tag exists locally
-- `~/shared/agent-skills` contains the expected skills from that tag
+- `~/shared/agent-skills` contains the expected 7 packaged skills from that tag unless you intentionally installed a subset
 - installed skill set matches the release/version you intended
 - `./scripts/print_version_info.sh` output is captured somewhere for reproducibility
 
@@ -155,14 +160,14 @@ Use this layout when the team wants:
 ```text
 ~/projects/openclaw-upgrade-kit/
 /tmp/openclaw-release-archive-test/
-└── openclaw-upgrade-kit-v0.1.0.tar.gz
+└── openclaw-upgrade-kit-v0.1.1.tar.gz
 ```
 
 ### Archive creation command
 
 ```bash
 cd ~/projects/openclaw-upgrade-kit
-./scripts/create_release_archive.sh v0.1.0 /tmp/openclaw-release-archive-test
+./scripts/create_release_archive.sh v0.1.1 /tmp/openclaw-release-archive-test
 ```
 
 ### Skill selection suggestion

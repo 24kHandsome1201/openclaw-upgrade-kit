@@ -1,5 +1,8 @@
 # Release Plan v0.1.1
 
+> This file describes the **tagged `v0.1.1` release plan and release state**.
+> It is historical release documentation, not a description of the current `master` HEAD after later commits.
+
 ## Version
 
 `v0.1.1`
@@ -99,11 +102,12 @@ For final publication of `v0.1.1`, verify:
 - the release remains documentation-and-script heavy rather than runtime-embedded
 - benchmark breadth is much better, but still not exhaustive across all real-world scenarios
 
-## Current release status
+## Current tagged-release status
 
 - tag exists: `v0.1.1`
-- clean dry-run verdict: `Pass`
-- next publish action: create/update the GitHub release body from `docs/release-notes-v0.1.1.md`
+- clean dry-run verdict for the tagged release: `Pass`
+- next publish action for the tagged release: create/update the GitHub release body from `docs/release-notes-v0.1.1.md`
+- note: current `master` may contain additional post-`v0.1.1` commits and should be documented separately from this tagged release
 
 ## Notable difference from v0.1.0
 

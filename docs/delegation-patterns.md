@@ -82,9 +82,9 @@ Preferred scope shapes:
 - one family of related files
 
 Examples:
-- `skills/openclaw-runtime/**`
+- `skills/openclaw-runtime/SKILL.md` plus its `references/` directory
 - `docs/runtime-layout-examples.md`
-- `benchmarks/results/ops-*.md`
+- `benchmarks/results/ops-example.md` and `benchmarks/results/ops-conflict-example.md`
 
 A narrow write scope reduces:
 - merge conflicts

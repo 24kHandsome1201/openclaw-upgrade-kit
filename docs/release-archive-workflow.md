@@ -16,13 +16,13 @@ Provide a transparent, low-friction way to package a tagged or branch-based snap
 Install all packaged skills from a tag into a target directory:
 
 ```bash
-./scripts/install_from_tag.sh v0.1.0 ~/.codex/skills
+./scripts/install_from_tag.sh v0.1.1 ~/.codex/skills
 ```
 
 Install only selected skills from a tag:
 
 ```bash
-./scripts/install_from_tag.sh v0.1.0 ~/.codex/skills openclaw-manus openclaw-ops
+./scripts/install_from_tag.sh v0.1.1 ~/.codex/skills openclaw-manus openclaw-ops
 ```
 
 ### Inputs
@@ -43,13 +43,13 @@ Install only selected skills from a tag:
 Create a tar.gz archive for a ref:
 
 ```bash
-./scripts/create_release_archive.sh v0.1.0
+./scripts/create_release_archive.sh v0.1.1
 ```
 
 Or choose a custom output directory:
 
 ```bash
-./scripts/create_release_archive.sh v0.1.0 /tmp/release-out
+./scripts/create_release_archive.sh v0.1.1 /tmp/release-out
 ```
 
 ### Inputs
@@ -74,6 +74,6 @@ Or choose a custom output directory:
 ## Suggested smoke tests
 
 ```bash
-./scripts/install_from_tag.sh v0.1.0 /tmp/openclaw-from-tag-test
-./scripts/create_release_archive.sh v0.1.0 /tmp/openclaw-release-archive-test
+./scripts/install_from_tag.sh v0.1.1 /tmp/openclaw-from-tag-test
+./scripts/create_release_archive.sh v0.1.1 /tmp/openclaw-release-archive-test
 ```

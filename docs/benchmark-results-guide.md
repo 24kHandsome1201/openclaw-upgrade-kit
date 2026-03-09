@@ -31,9 +31,20 @@ The goal is to make behavioral improvement visible and reviewable.
 - `benchmarks/results/ops-webhook-misconfig-example.md`
 - `benchmarks/results/ops-stale-process-example.md`
 - `benchmarks/results/docs-example.md`
-- `benchmarks/results/docs-architecture-consistency-example.md`
+- `benchmarks/results/docs-runbook-example.md`
+- `benchmarks/results/docs-release-note-example.md`
 - `benchmarks/results/docs-onboarding-setup-example.md`
+- `benchmarks/results/docs-architecture-consistency-example.md`
 - `benchmarks/results/long-task-example.md`
+
+
+## Task -> result family quick map
+
+- `benchmarks/tasks/research.md` -> the `research-...` result files in `benchmarks/results/`
+- `benchmarks/tasks/coding.md` -> the `coding-...` result files in `benchmarks/results/`
+- `benchmarks/tasks/ops.md` -> the `ops-...` result files in `benchmarks/results/`
+- `benchmarks/tasks/docs.md` -> the `docs-...` result files in `benchmarks/results/`
+- long-task / checkpoint / resume scenarios -> `benchmarks/results/long-task-example.md`
 
 ## Recommendation
 
@@ -56,6 +67,8 @@ As the repo grows, keep one result file per benchmark category:
 - research / api-docs-verification
 - research / pricing-spec-change
 - docs
+- docs / runbook
+- docs / release-note
 - docs / onboarding-setup
 - docs / architecture-consistency
 - long-task / resume

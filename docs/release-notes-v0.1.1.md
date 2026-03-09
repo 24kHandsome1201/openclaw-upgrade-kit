@@ -1,5 +1,8 @@
 # v0.1.1 - Skills, routing, packaging, and evaluation expansion
 
+> These notes describe the **tagged `v0.1.1` release**.
+> They do not automatically track later `master` commits made after the `v0.1.1` tag.
+
 ## Summary
 
 `v0.1.1` is the first post-MVP expansion release for `openclaw-upgrade-kit`.
@@ -117,6 +120,10 @@ This release still does not provide:
 - browser automation
 - multi-agent orchestration
 - fully automated packaging for every target environment
+
+## Tagged-release boundary note
+
+If `master` has moved ahead since `v0.1.1`, treat newer trust-first docs, routing tweaks, and planning updates as post-release changes until they are included in a later tagged version.
 
 ## Suggested next steps
 

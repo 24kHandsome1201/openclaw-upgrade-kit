@@ -2,6 +2,8 @@
 
 Use this checklist before creating a new tagged release.
 
+For version-specific release notes (for example `v0.1.1`), keep a clear boundary between the historical tagged release and any newer commits already present on `master`.
+
 ## Goal
 
 The goal of a release is not only to publish files, but to publish a clearly improved project state.
@@ -67,9 +69,10 @@ A good release should have:
 ./scripts/install_local_skills.sh /tmp/openclaw-release-test
 ./scripts/install_selected_skills.sh /tmp/openclaw-release-selected-test openclaw-manus openclaw-ops
 ./scripts/print_version_info.sh
-./scripts/install_from_tag.sh v0.1.0 /tmp/openclaw-release-from-tag-test
-./scripts/create_release_archive.sh v0.1.0 /tmp/openclaw-release-archive-test
+./scripts/install_from_tag.sh v0.1.1 /tmp/openclaw-release-from-tag-test
+./scripts/create_release_archive.sh v0.1.1 /tmp/openclaw-release-archive-test
 ./scripts/smoke_test_release.sh /tmp/openclaw-release-smoke HEAD
+./scripts/prepare_release.sh HEAD /tmp/openclaw-release-prepare
 ```
 
 ## Acceptance rule

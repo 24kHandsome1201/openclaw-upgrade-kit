@@ -26,10 +26,10 @@ Advanced / specialized packaged skills:
 ## Option 2: Use as agent behavior reference
 
 If your runtime does not yet support automatic skill loading, use these files as structured behavior specs:
-- `SKILL.md`
-- `references/*.md`
-- `examples/*.md`
-- `benchmarks/*.md`
+- the target skill's `SKILL.md`
+- the specific files under that skill's `references/` directory that match the task
+- concrete before/after examples such as `examples/before-after-coding.md`
+- benchmark assets such as `benchmarks/rubric.md`, `benchmarks/tasks/`, and `benchmarks/results/`
 
 This is still useful because the repo is designed as an execution-behavior layer, not only a loader-specific package.
 
@@ -177,7 +177,7 @@ This keeps the upgrade kit useful even in minimal runtimes that only support cop
 3. if it is a specialized task, also run with the matching skill
 4. compare outputs using `benchmarks/rubric.md`
 5. record results with `benchmarks/results/template.md`
-6. review relevant `examples/before-after-*.md`
+6. review relevant before/after examples such as `examples/before-after-coding.md`, `examples/before-after-ops.md`, or `examples/before-after-research.md`
 
 ## Good first tasks to test
 

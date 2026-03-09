@@ -55,10 +55,11 @@ This project focuses on that gap.
 
 ### Path 2: I want to understand the skill system
 1. `README.md`
-2. `docs/roadmap-10-phases.md`
+2. `docs/research/derived/development-priority-roadmap-2026-03.md`
 3. `docs/runtime-routing-patterns.md`
 4. `docs/default-vs-specialized-routing.md`
 5. `docs/fallback-policy.md`
+6. `docs/roadmap-10-phases.md`
 
 ### Path 3: I want to evaluate results
 1. `benchmarks/rubric.md`
@@ -71,6 +72,12 @@ This project focuses on that gap.
 2. `docs/packaging-plan.md`
 3. `docs/release-archive-workflow.md`
 4. `docs/release-checklist.md`
+
+### Path 5: I maintain this repo and need the planning inputs
+1. `docs/research/agent-product-feedback-report-2026-03.md`
+2. `docs/research/derived/product-requirements-from-feedback-2026-03.md`
+3. `docs/research/derived/development-priority-roadmap-2026-03.md`
+4. `docs/research/derived/executable-backlog-from-feedback-2026-03.md`
 
 ---
 
@@ -102,6 +109,7 @@ This project focuses on that gap.
 | `scripts/create_release_archive.sh` | create a `.tar.gz` release archive for a git ref | `./scripts/create_release_archive.sh v0.1.0 /tmp/release-out` |
 | `scripts/prepare_release.sh` | release preparation helper | `./scripts/prepare_release.sh` |
 | `scripts/smoke_test_release.sh` | release smoke-test helper | `./scripts/smoke_test_release.sh` |
+| `scripts/smoke_test_tool_exposure.sh` | trust-first repo smoke test for packaged skills/docs/scripts | `./scripts/smoke_test_tool_exposure.sh` |
 
 ---
 
@@ -136,6 +144,12 @@ This project focuses on that gap.
 - `benchmarks/tasks/`
 - `benchmarks/results/`
 
+### Trust-first diagnostics and operational clarity
+- `docs/channel-health-model.md`
+- `docs/provider-error-taxonomy.md`
+- `docs/tool-exposure-smoke-test.md`
+- `docs/touched-scope-reporting.md`
+
 ### Packaging and release
 - `docs/versioned-installation-notes.md`
 - `docs/packaging-plan.md`
@@ -154,6 +168,12 @@ This project focuses on that gap.
 - `docs/limitations.md`
 - `docs/roadmap-10-phases.md`
 - `docs/delegation-patterns.md`
+
+### Maintainer / development track
+- `docs/research/agent-product-feedback-report-2026-03.md`
+- `docs/research/derived/product-requirements-from-feedback-2026-03.md`
+- `docs/research/derived/development-priority-roadmap-2026-03.md`
+- `docs/research/derived/executable-backlog-from-feedback-2026-03.md`
 
 ---
 
@@ -209,9 +229,9 @@ See:
 - `docs/roadmap-10-phases.md`
 
 Current near-term focus:
-- community benchmark contribution flow
-- release/evaluation discipline
-- long-task benchmark examples
+- trust-first diagnostics and operational clarity docs
+- research-derived planning inputs and backlog alignment
+- release/evaluation discipline tied to current repository state
 - more engineering-focused packaging and runtime patterns
 
 ---
