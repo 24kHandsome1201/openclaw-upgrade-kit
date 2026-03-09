@@ -25,6 +25,24 @@ git clone git@github.com:24kHandsome1201/openclaw-upgrade-kit.git
 cd openclaw-upgrade-kit
 ```
 
+List packaged skills:
+
+```bash
+./scripts/list_packaged_skills.sh
+```
+
+Install all packaged skills:
+
+```bash
+./scripts/install_local_skills.sh ~/.codex/skills
+```
+
+Install only selected skills:
+
+```bash
+./scripts/install_selected_skills.sh ~/.codex/skills openclaw-manus openclaw-ops
+```
+
 ## Use with OpenClaw
 
 The exact integration method depends on your OpenClaw setup.
@@ -37,6 +55,9 @@ Copy one of the skill folders into the location where your OpenClaw-compatible s
 Suggested starting point:
 - `skills/openclaw-manus/`
 - `skills/openclaw-ops/`
+- `skills/openclaw-research/`
+- `skills/openclaw-coding/`
+- `skills/openclaw-docs/`
 
 ### Option 2: Use the repo as a reference pack
 Even without direct automatic loading, you can use:
@@ -74,6 +95,12 @@ The current focus is:
 - policy clarity
 - evaluation quality
 - reusable structure
+
+## Related docs
+
+- `docs/versioned-installation-notes.md`
+- `docs/integration-snippets.md`
+- `docs/packaging-plan.md`
 
 ## Near-term roadmap
 

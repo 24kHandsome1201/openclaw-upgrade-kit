@@ -40,6 +40,13 @@ It is the general execution-upgrade skill.
 - test/build/lint troubleshooting
 - code changes requiring validation
 
+### Choose `openclaw-docs` for:
+- README review
+- setup/runbook validation
+- doc-to-code drift detection
+- release note consistency checks
+- documentation correction tied to real implementation
+
 ## Decision shortcut
 
 Ask:
@@ -54,6 +61,10 @@ Ask:
 
 ### Is the main task editing or validating code?
 - yes -> `openclaw-coding`
+- no -> continue
+
+### Is the main task reviewing or correcting documentation against implementation?
+- yes -> `openclaw-docs`
 - no -> `openclaw-manus`
 
 ## Layering pattern
@@ -63,6 +74,7 @@ A useful pattern is:
 - switch to `openclaw-ops` when the task becomes runtime/incident-heavy
 - switch to `openclaw-research` when current-source verification becomes central
 - switch to `openclaw-coding` when implementation changes and validation become the main work
+- switch to `openclaw-docs` when the main work becomes doc review or doc-to-code correction
 
 ## Future direction
 

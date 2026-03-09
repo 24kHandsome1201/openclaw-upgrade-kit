@@ -14,6 +14,11 @@ if [[ -z "$TARGET_DIR" ]]; then
   exit 1
 fi
 
+if [[ ! -d "$SOURCE_SKILLS_DIR" ]]; then
+  echo "skills directory not found: $SOURCE_SKILLS_DIR" >&2
+  exit 1
+fi
+
 mkdir -p "$TARGET_DIR"
 
 copy_skill() {
@@ -31,10 +36,10 @@ copy_skill() {
   echo "[ok] installed $skill_name -> $dst"
 }
 
-copy_skill "openclaw-manus"
-copy_skill "openclaw-ops"
-copy_skill "openclaw-research"
-copy_skill "openclaw-coding"
+while IFS= read -r skill_name; do
+  copy_skill "$skill_name"
+done < <(find "$SOURCE_SKILLS_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f
+' | sort)
 
 echo
 cat <<MSG

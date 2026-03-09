@@ -26,6 +26,7 @@ This copies:
 - `skills/openclaw-ops/`
 - `skills/openclaw-research/`
 - `skills/openclaw-coding/`
+- `skills/openclaw-docs/`
 
 into:
 - `~/.codex/skills/`
@@ -48,7 +49,11 @@ You should end up with:
 │   ├── SKILL.md
 │   ├── references/
 │   └── agents/
-└── openclaw-coding/
+├── openclaw-coding/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+└── openclaw-docs/
     ├── SKILL.md
     ├── references/
     └── agents/
@@ -82,12 +87,19 @@ You should end up with:
 - repository cleanup
 - test/build/lint validation
 
+### Use `openclaw-docs` when you want:
+- README review
+- setup flow validation
+- runbook correction
+- doc-to-code drift checks
+
 ## Suggested first tests
 
 1. Run a coding cleanup task with `openclaw-coding`
 2. Run a service-debugging task with `openclaw-ops`
 3. Run a latest-info comparison task with `openclaw-research`
-4. Compare output quality using `benchmarks/rubric.md`
+4. Run a README drift review task with `openclaw-docs`
+5. Compare output quality using `benchmarks/rubric.md`
 
 ## Notes
 

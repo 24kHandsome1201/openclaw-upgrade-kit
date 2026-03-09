@@ -1,0 +1,3 @@
+display_name: OpenClaw Docs
+short_description: Specialize OpenClaw for README, setup, runbook, and doc-to-code drift review.
+default_prompt: Use the OpenClaw Docs skill to inspect docs against the real implementation, patch drift, and separate validated facts from remaining uncertainty.

@@ -20,6 +20,7 @@ The goal is to make behavioral improvement visible and reviewable.
 - `benchmarks/results/research-example.md`
 - `benchmarks/results/coding-example.md`
 - `benchmarks/results/ops-example.md`
+- `benchmarks/results/docs-example.md`
 
 ## Recommendation
 
