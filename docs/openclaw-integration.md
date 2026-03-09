@@ -161,6 +161,9 @@ This keeps the upgrade kit useful even in minimal runtimes that only support cop
 - `docs/fallback-policy.md`
 - `docs/runtime-integration-examples.md`
 - `docs/manual-routing-playbook.md`
+- `docs/channel-health-model.md` — useful when a chat/channel integration looks partially healthy but inbound or auth state is unclear
+- `docs/provider-error-taxonomy.md` — useful when model/provider failures need clearer root-cause labeling
+- `docs/touched-scope-reporting.md` — useful for showing what a runtime/integration task actually touched and what it intentionally left alone
 
 ## Current limitation
 

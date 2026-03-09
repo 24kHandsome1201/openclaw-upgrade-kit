@@ -53,6 +53,11 @@ The direction still looks differentiated if we position it as:
 ## Next step
 Define the MVP around one core skill, benchmark tasks, and before/after examples.
 
+### Fact / inference note
+- Fact: public repos exist that collect prompt materials for Manus, Cursor, and v0.
+- Inference: the execution-upgrade-kit positioning still appears differentiated because I did not find a strong OpenClaw-focused equivalent.
+- Unvalidated: this conclusion should be revisited if new repos gain traction quickly.
+
 ---
 
 ## Example 2: Coding task
@@ -244,6 +249,13 @@ Actual deployment execution requires platform access, credentials, or account pe
 
 ## Recommended next step
 Provide the missing platform access or run the following deploy step in the target environment, then I can help validate the result immediately afterward.
+
+### Why this is a good blocked response
+- it states the goal clearly
+- it shows what was already checked
+- it names the blocker instead of hand-waving
+- it separates completed verification from unavailable execution
+- it leaves a concrete next step instead of stopping at "cannot do it"
 
 ---
 

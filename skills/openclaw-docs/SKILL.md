@@ -40,6 +40,7 @@ Use it for:
 - do not preserve outdated commands for convenience
 - do not present unverified behavior as documented fact
 - prefer doc-to-code consistency over marketing language
+- keep the minimum transparent-execution block visible for non-trivial tasks: Goal / Verification targets / Findings / Validation / Next Step
 - note blockers such as missing runtime access or ambiguous setup flow
 
 ## References
@@ -49,3 +50,8 @@ If needed, read:
 - `references/drift-checklist.md`
 - `references/validation-boundaries.md`
 - `references/working-mode.md`
+
+For larger tasks, follow a transparent-execution style:
+- show what is being verified now
+- separate validated facts from inference and unvalidated runtime claims
+- make blocked state explicit instead of leaving the review ambiguous

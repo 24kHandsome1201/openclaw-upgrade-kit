@@ -21,6 +21,14 @@ From the repository root:
 ./scripts/install_local_skills.sh ~/.codex/skills
 ```
 
+Optional sanity check right after install:
+
+```bash
+./scripts/smoke_test_tool_exposure.sh
+```
+
+This is useful because it confirms the expected repo-level skills/docs/scripts are present before you debug a runtime issue that is really just an incomplete local setup.
+
 This copies:
 - `skills/openclaw-manus/`
 - `skills/openclaw-ops/`
@@ -104,5 +112,10 @@ You should end up with:
 ## Notes
 
 This is intentionally simple.
+
+If the install is fine but a channel still behaves oddly, continue with:
+- `docs/channel-health-model.md` for inbound/outbound/auth/polling-webhook state separation
+- `docs/provider-error-taxonomy.md` for classifying provider/auth/config failures more accurately
+- `docs/touched-scope-reporting.md` if you want runtime or incident reports to clearly show what was and was not touched
 
 The current project goal is to make skill adoption easier without assuming one exact OpenClaw runtime implementation.

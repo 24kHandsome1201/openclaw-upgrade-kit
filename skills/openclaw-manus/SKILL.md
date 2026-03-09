@@ -119,6 +119,7 @@ If needed, read these references:
 - `references/execution-loop.md` for detailed execution flow
 - `references/tool-selection-policy.md` for tool choice rules
 - `references/reporting-format.md` for progress/output structure
+- `references/transparent-execution-addendum.md` for the minimum Goal / Plan / Progress / Validation / Next Step block, plus fact / inference / unvalidated wording and blocked-state structure
 - `references/task-patterns.md` for research / coding / ops / docs variants
 - `references/working-mode.md` for staged, verifiable, and delegatable execution mode
 - `references/examples.md` for few-shot examples

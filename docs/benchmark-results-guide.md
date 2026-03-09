@@ -37,6 +37,11 @@ The goal is to make behavioral improvement visible and reviewable.
 
 ## Recommendation
 
+When writing benchmark results, also note whether the run made these trust-first aspects visible:
+- `docs/channel-health-model.md` style state separation for channel/runtime incidents
+- `docs/provider-error-taxonomy.md` style root-cause labeling for model/provider failures
+- `docs/touched-scope-reporting.md` style scope visibility for what was and was not touched
+
 As the repo grows, keep one result file per benchmark category:
 - coding
 - coding / build-failure

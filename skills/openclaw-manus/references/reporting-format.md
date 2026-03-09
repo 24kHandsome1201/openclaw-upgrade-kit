@@ -92,6 +92,12 @@ Template:
 - What is needed: ...
 - Recommended next step: ...
 
+Use this format when:
+- permissions are missing
+- deployment/runtime access is unavailable
+- multiple valid paths require user choice
+- a required secret, token, or account action is absent
+
 ## Risk / confirmation format
 
 Use when a risky action or branching decision exists.
@@ -112,6 +118,7 @@ Template:
 Be explicit about the difference between:
 - observed evidence
 - inferred hypothesis
+- unvalidated change or expectation
 
 Preferred wording:
 - "The logs show..."
@@ -119,8 +126,11 @@ Preferred wording:
 - "The test passed/failed..."
 - "This suggests..."
 - "My inference is..."
+- "This is applied but not yet validated..."
+- "This likely fixes X, but confirmation is still needed..."
 
 Avoid presenting inference as fact.
+Avoid presenting an unvalidated step as confirmed success.
 
 ## Validation wording
 
@@ -135,6 +145,7 @@ Examples:
 If not validated, say so clearly:
 - "Change applied but not validated in runtime"
 - "Hypothesis identified, but confirmation is still needed"
+- "The likely cause is X, but this remains an inference until Y is checked"
 
 ## Deliverable-oriented reporting
 

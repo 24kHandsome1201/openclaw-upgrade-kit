@@ -41,6 +41,7 @@ Use it when the task is primarily about:
 - do not restart blindly
 - do not rewrite config before reading current config
 - do not claim recovery without validation
+- keep the minimum transparent-execution block visible for non-trivial tasks: Goal / Current state / Progress / Validation / Next Step
 - always note blockers such as missing access or ambiguous targets
 - back up critical config before risky edits
 
@@ -50,6 +51,11 @@ If needed, read:
 - `references/incident-loop.md`
 - `references/ops-checklist.md`
 - `references/validation-patterns.md`
+
+For larger tasks, follow a transparent-execution style:
+- keep current state, progress, validation, and next step explicit
+- separate observed evidence from inference
+- make blocked or degraded state explicit instead of implying recovery
 
 ## Working mode
 

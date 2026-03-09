@@ -40,6 +40,7 @@ Use it for:
 - do not claim a fix without validation
 - keep changes narrow and reviewable
 - prefer code and repo evidence over speculation
+- keep the minimum transparent-execution block visible for non-trivial tasks: Goal / Plan / Progress / Validation / Next Step
 - note blockers such as missing tests, missing environment, or unclear target behavior
 
 ## References
@@ -49,3 +50,8 @@ If needed, read:
 - `references/diff-strategy.md`
 - `references/validation-patterns.md`
 - `references/working-mode.md`
+
+For larger tasks, follow a transparent-execution style:
+- expose Goal / Plan / Progress / Validation / Next Step
+- separate observed facts from inference
+- make blocked state explicit instead of silently stalling

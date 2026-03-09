@@ -40,6 +40,7 @@ Use it for:
 - do not blur facts and conclusions
 - do not rely only on secondary summaries if primary sources are available
 - note uncertainty explicitly when evidence is incomplete
+- keep the minimum transparent-execution block visible for non-trivial tasks: Goal / Source strategy / Progress / Validation / Next Step
 - prefer concise synthesis over long quote-heavy output
 
 ## References
@@ -48,6 +49,11 @@ If needed, read:
 - `references/source-hierarchy.md`
 - `references/research-loop.md`
 - `references/synthesis-patterns.md`
+
+For larger tasks, follow a transparent-execution style:
+- show the research question, source strategy, progress, and next step
+- separate sourced facts from inference
+- make incomplete or blocked verification explicit
 
 ## Working mode
 

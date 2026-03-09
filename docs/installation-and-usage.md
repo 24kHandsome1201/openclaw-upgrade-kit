@@ -43,6 +43,14 @@ Install only selected skills:
 ./scripts/install_selected_skills.sh ~/.codex/skills openclaw-manus openclaw-ops
 ```
 
+Run the repository-level tool exposure smoke test:
+
+```bash
+./scripts/smoke_test_tool_exposure.sh
+```
+
+This is useful because it quickly confirms that the packaged skills, key docs, and helper scripts expected by the upgrade kit are actually present before deeper integration work begins.
+
 ## Use with OpenClaw
 
 The exact integration method depends on your OpenClaw setup.
@@ -101,6 +109,9 @@ The current focus is:
 - `docs/versioned-installation-notes.md`
 - `docs/integration-snippets.md`
 - `docs/packaging-plan.md`
+- `docs/tool-exposure-smoke-test.md` — explains what the smoke test covers and what it intentionally does not validate
+- `docs/channel-health-model.md` — helps when installation succeeded but channel health still looks partial or degraded
+- `docs/provider-error-taxonomy.md` — helps separate local config/provider/auth failures during setup
 
 ## Near-term roadmap
 
