@@ -68,6 +68,8 @@ This repo gives an agent a structured way to:
   - a Manus-like execution skill for OpenClaw
 - `skills/openclaw-ops/`
   - a specialized ops / incident-response skill for OpenClaw
+- `skills/openclaw-research/`
+  - a specialized research / comparison / latest-info skill for OpenClaw
 - planning / execution / reporting references
 - benchmark task definitions
 - before/after examples
@@ -106,12 +108,20 @@ openclaw-upgrade-kit/
 │   │   │   └── examples.md
 │   │   └── agents/
 │   │       └── openai.yaml
-│   └── openclaw-ops/
+│   ├── openclaw-ops/
+│   │   ├── SKILL.md
+│   │   ├── references/
+│   │   │   ├── incident-loop.md
+│   │   │   ├── ops-checklist.md
+│   │   │   └── validation-patterns.md
+│   │   └── agents/
+│   │       └── openai.yaml
+│   └── openclaw-research/
 │       ├── SKILL.md
 │       ├── references/
-│       │   ├── incident-loop.md
-│       │   ├── ops-checklist.md
-│       │   └── validation-patterns.md
+│       │   ├── research-loop.md
+│       │   ├── source-hierarchy.md
+│       │   └── synthesis-patterns.md
 │       └── agents/
 │           └── openai.yaml
 ├── benchmarks/
@@ -140,6 +150,9 @@ A general execution-upgrade skill for planning, tool use, evidence gathering, pr
 
 ### `openclaw-ops`
 A specialized ops skill for runtime troubleshooting, log inspection, config validation, and safe corrective actions.
+
+### `openclaw-research`
+A specialized research skill for current-info lookup, source-backed comparison, and differentiation analysis.
 
 ## Benchmarks
 
@@ -186,6 +199,8 @@ This repository is released under the MIT License.
 - `docs/openclaw-integration.md`
 - `docs/github-launch-kit.md`
 - `docs/release-notes-v0.1.0.md`
+- `benchmarks/results/template.md`
+- `benchmarks/results/research-example.md`
 
 
 ## Quick start

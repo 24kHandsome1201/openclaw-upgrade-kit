@@ -1,0 +1,3 @@
+display_name: OpenClaw Research
+short_description: Specialize OpenClaw for source-backed research, comparison, and latest-information tasks.
+default_prompt: Use the OpenClaw Research skill to gather primary sources, verify freshness, synthesize findings, and provide evidence-backed conclusions.
