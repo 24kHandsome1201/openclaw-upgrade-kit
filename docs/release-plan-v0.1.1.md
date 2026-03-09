@@ -85,6 +85,7 @@ Before tagging `v0.1.1`, verify:
 - Git tag: `v0.1.1`
 - GitHub release title: `v0.1.1 - Skills, routing, packaging, and evaluation expansion`
 - Release notes source: `docs/release-notes-v0.1.1.md`
+- Dry-run reference: `docs/release-dry-run-report-v0.1.1.md`
 
 ## Known release risks
 

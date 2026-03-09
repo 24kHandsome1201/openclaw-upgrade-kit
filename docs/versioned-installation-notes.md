@@ -81,3 +81,11 @@ For release preparation on the current working tree, use:
 ```
 
 These are local validation helpers, not publishing commands.
+
+
+## Dry-run note
+
+For a non-trivial release such as `v0.1.1`, it is useful to keep a dry-run report alongside the release materials, for example:
+- `docs/release-dry-run-report-v0.1.1.md`
+
+This should summarize what was actually run, what passed, and what still blocks tagging.

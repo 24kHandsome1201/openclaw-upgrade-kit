@@ -50,3 +50,8 @@ If needed, read:
 - `references/incident-loop.md`
 - `references/ops-checklist.md`
 - `references/validation-patterns.md`
+
+## Working mode
+
+If the task is larger or delegated, also read:
+- `references/working-mode.md` for staged, verifiable, and delegatable execution mode

@@ -58,6 +58,7 @@ A good release should have:
 - [ ] major additions are listed accurately
 - [ ] known limitations are still true
 - [ ] next steps are realistic and specific
+- [ ] dry-run report exists when preparing a non-trivial release
 
 ## Suggested pre-release commands
 
