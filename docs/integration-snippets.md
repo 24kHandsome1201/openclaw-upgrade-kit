@@ -63,3 +63,13 @@ Then run a coding benchmark and score it with:
 Then run a README/setup drift review and record findings with:
 - `benchmarks/tasks/docs.md`
 - `benchmarks/results/template.md`
+
+
+## 9. Manual routing reference flow
+
+1. Start with `openclaw-manus` if the task is mixed.
+2. Switch to `openclaw-ops` for logs/status/config.
+3. Switch to `openclaw-research` for latest-info/source checks.
+4. Switch to `openclaw-coding` for implementation changes.
+5. Switch to `openclaw-docs` for doc-to-code correction.
+6. Return to `openclaw-manus` for mixed final delivery.

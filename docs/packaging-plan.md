@@ -15,6 +15,8 @@ Current distribution is repo-based:
 - `scripts/install_selected_skills.sh`
 - `scripts/list_packaged_skills.sh`
 - `scripts/print_version_info.sh`
+- `scripts/install_from_tag.sh`
+- `scripts/create_release_archive.sh`
 - installation and setup docs
 
 ## Phase 7 goals
@@ -53,4 +55,6 @@ A strong packaging phase should make it possible to:
 - install all skills quickly
 - install selected skills only
 - identify the installed repo version
+- install skills from an existing local tag
+- create a simple release archive from a tag or ref
 - follow a documented stable-install path using tags

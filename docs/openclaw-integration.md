@@ -159,6 +159,8 @@ This keeps the upgrade kit useful even in minimal runtimes that only support cop
 - `docs/runtime-routing-patterns.md`
 - `docs/default-vs-specialized-routing.md`
 - `docs/fallback-policy.md`
+- `docs/runtime-integration-examples.md`
+- `docs/manual-routing-playbook.md`
 
 ## Current limitation
 

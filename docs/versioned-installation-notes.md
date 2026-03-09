@@ -58,3 +58,15 @@ For comparisons and benchmark writeups, record:
 - scoring rubric version
 
 This makes benchmark results easier to trust and reproduce.
+
+## Install directly from an existing local tag
+
+```bash
+./scripts/install_from_tag.sh v0.1.0 ~/.codex/skills
+```
+
+## Create a release archive
+
+```bash
+./scripts/create_release_archive.sh v0.1.0
+```
