@@ -1,0 +1,92 @@
+name: Skill request / proposal
+description: Propose a new skill or a major update to an existing skill in openclaw-upgrade-kit.
+title: "[Skill]: "
+labels:
+  - skill
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose a new skill or a meaningful skill update.
+        Keep the scope specific and tied to the current execution-upgrade framework.
+
+  - type: input
+    id: skill_name
+    attributes:
+      label: Skill name
+      description: Proposed skill name.
+      placeholder: openclaw-runtime
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem this skill solves
+      description: What gap does this skill address?
+      placeholder: The repo lacks a skill specialized for runtime routing and host-specific execution behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: task_scope
+    attributes:
+      label: Task scope
+      description: Which task shapes should route to this skill?
+      placeholder: |
+        - runtime routing
+        - fallback selection
+        - host-specific execution patterns
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_files
+    attributes:
+      label: Expected files
+      description: List the expected skill files.
+      placeholder: |
+        skills/openclaw-runtime/SKILL.md
+        skills/openclaw-runtime/references/...
+        skills/openclaw-runtime/agents/openai.yaml
+    validations:
+      required: true
+
+  - type: textarea
+    id: references_needed
+    attributes:
+      label: Reference docs or assets needed
+      description: What references should this skill include or depend on?
+      placeholder: runtime-routing-patterns.md, fallback-policy.md, manual-routing-playbook.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: validation_plan
+    attributes:
+      label: Validation plan
+      description: How will we know this skill is useful?
+      placeholder: |
+        - add one benchmark result example
+        - add one runtime integration example
+        - compare against openclaw-manus on a mixed routing task
+    validations:
+      required: true
+
+  - type: textarea
+    id: overlap
+    attributes:
+      label: Overlap with existing skills
+      description: Explain how this differs from current skills.
+      placeholder: It starts from openclaw-manus but specializes in routing decisions and runtime-specific handoff behavior.
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks or limits
+      description: What could go wrong if this skill is added?
+      placeholder: Might duplicate existing docs unless the scope is kept narrow.
+    validations:
+      required: true

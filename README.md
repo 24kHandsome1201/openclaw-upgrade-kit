@@ -4,22 +4,37 @@ Upgrade OpenClaw from a chat assistant into a more execution-oriented agent.
 
 **You only need to tell your agent how to work.**
 
-`openclaw-upgrade-kit` is a modular skill and policy layer for making OpenClaw-style agents more planning-first, tool-first, evidence-based, and delivery-oriented.
+`openclaw-upgrade-kit` is a modular behavior-upgrade layer for OpenClaw-style agents. It packages reusable skills, routing rules, benchmark assets, installation scripts, and release workflows so an open agent can become more planning-first, tool-first, evidence-based, and delivery-oriented.
 
 It is designed for both:
-- **agents** — to follow clearer execution behavior
+- **agents** — to follow clearer execution rules
 - **humans** — to define how their agents should investigate, act, verify, and deliver
 
-It is **not** a prompt dump, a leaked-system-prompt mirror, or an official clone of any closed product.
+It is **not**:
+- an official Manus implementation
+- a leaked prompt archive
+- a one-file persona prompt
+- a guarantee of full autonomous execution
 
-Instead, it is a practical, reusable upgrade layer for making open agents more capable in real tasks.
+---
 
-## Why
+## Current capability overview
+
+Today this repository includes:
+- **5 packaged skills**: general execution, ops, research, coding, docs
+- **benchmark system**: rubric, task prompts, result template, result examples
+- **installation/distribution tooling**: install all, install selected, install from tag, version info, release archive generation
+- **runtime guidance**: routing, fallback, manual routing playbooks, integration examples
+- **long-task guidance**: checkpoints, resume/recovery, long-task examples
+- **release/community docs**: contribution guide, release checklist, evaluation cadence, roadmap
+
+---
+
+## Why this exists
 
 Most open agents can answer questions.
 
 Far fewer can reliably:
-
 - plan a task before acting
 - use tools before guessing
 - gather evidence before claiming
@@ -28,288 +43,190 @@ Far fewer can reliably:
 
 This project focuses on that gap.
 
-## Human-facing idea
+---
 
-This project is built around a simple principle:
+## Recommended reading paths
 
-> **You only need to tell your agent how to work.**
+### Path 1: I just want to use it
+1. `docs/installation-and-usage.md`
+2. `docs/openclaw-setup-example.md`
+3. `docs/skill-selection-guide.md`
+4. `docs/openclaw-integration.md`
 
-That means giving your agent reusable execution rules instead of relying only on raw model behavior.
+### Path 2: I want to understand the skill system
+1. `README.md`
+2. `docs/roadmap-10-phases.md`
+3. `docs/runtime-routing-patterns.md`
+4. `docs/default-vs-specialized-routing.md`
+5. `docs/fallback-policy.md`
 
-## Agent-facing idea
+### Path 3: I want to evaluate results
+1. `benchmarks/rubric.md`
+2. `benchmarks/tasks/`
+3. `docs/benchmark-results-guide.md`
+4. `benchmarks/results/`
 
-This repo gives an agent a structured way to:
+### Path 4: I want release / packaging workflow
+1. `docs/versioned-installation-notes.md`
+2. `docs/packaging-plan.md`
+3. `docs/release-archive-workflow.md`
+4. `docs/release-checklist.md`
 
-- frame goals
-- make short actionable plans
-- use tools before speculating
-- separate evidence from inference
-- report progress during long tasks
-- deliver outcomes instead of commentary
+---
 
-## What this repo provides
+## Skills matrix
 
-- **Skills** for execution-oriented behavior
-- **Policies** for planning, tool selection, and reporting
-- **References** for reusable task patterns
-- **Benchmarks** for before/after comparisons
-- **Examples** that show how behavior improves in practice
+| Skill | Primary use | Best for | Key files |
+| --- | --- | --- | --- |
+| `openclaw-manus` | general execution upgrade | mixed multi-step tasks, planning, delivery | `skills/openclaw-manus/SKILL.md` |
+| `openclaw-ops` | ops specialization | service failures, logs, config, runtime validation | `skills/openclaw-ops/SKILL.md` |
+| `openclaw-research` | research specialization | latest info, source-backed comparison, differentiation | `skills/openclaw-research/SKILL.md` |
+| `openclaw-coding` | coding specialization | bug fixing, minimal diffs, validation-heavy changes | `skills/openclaw-coding/SKILL.md` |
+| `openclaw-docs` | docs specialization | README/setup/runbook review, doc-to-code drift | `skills/openclaw-docs/SKILL.md` |
 
-## Project goals
+**Default routing rule:** if the task is mixed or still unclear, start with `openclaw-manus`, then switch to a specialized skill when one lane becomes dominant.
 
-- Make OpenClaw more proactive
-- Make outputs more structured and reliable
-- Reduce “chatty but non-executing” behavior
-- Provide reusable patterns for the open-agent community
+---
 
-## Included in v0
+## Scripts matrix
 
-- `skills/openclaw-manus/`
-  - a Manus-like execution skill for OpenClaw
-- `skills/openclaw-ops/`
-  - a specialized ops / incident-response skill for OpenClaw
-- `skills/openclaw-research/`
-  - a specialized research / comparison / latest-info skill for OpenClaw
-- `skills/openclaw-coding/`
-  - a specialized coding / minimal-diff / validation skill for OpenClaw
-- `skills/openclaw-docs/`
-  - a specialized documentation review / drift-check / setup-validation skill
-- planning / execution / reporting references
-- benchmark task definitions
-- benchmark result templates and examples
-- before/after examples
-- local install and packaging scripts
+| Script | Purpose | Example |
+| --- | --- | --- |
+| `scripts/list_packaged_skills.sh` | list packaged skills | `./scripts/list_packaged_skills.sh` |
+| `scripts/install_local_skills.sh` | install all packaged skills into a target dir | `./scripts/install_local_skills.sh ~/.codex/skills` |
+| `scripts/install_selected_skills.sh` | install only selected skills | `./scripts/install_selected_skills.sh ~/.codex/skills openclaw-manus openclaw-ops` |
+| `scripts/install_from_tag.sh` | install skills from a local git tag | `./scripts/install_from_tag.sh v0.1.0 ~/.codex/skills` |
+| `scripts/print_version_info.sh` | print tag / branch / commit info | `./scripts/print_version_info.sh` |
+| `scripts/create_release_archive.sh` | create a `.tar.gz` release archive for a git ref | `./scripts/create_release_archive.sh v0.1.0 /tmp/release-out` |
+| `scripts/prepare_release.sh` | release preparation helper | `./scripts/prepare_release.sh` |
+| `scripts/smoke_test_release.sh` | release smoke-test helper | `./scripts/smoke_test_release.sh` |
 
-## What this is not
+---
 
-This project is **not**:
+## Docs map
 
-- an official Manus implementation
-- a leaked prompt archive
-- a one-file persona prompt
-- a guarantee of full autonomous execution
+### Core onboarding
+- `docs/installation-and-usage.md`
+- `docs/openclaw-setup-example.md`
+- `docs/skill-selection-guide.md`
+- `docs/openclaw-integration.md`
 
-## Design principles
+### Routing and runtime behavior
+- `docs/runtime-routing-patterns.md`
+- `docs/default-vs-specialized-routing.md`
+- `docs/fallback-policy.md`
+- `docs/runtime-integration-examples.md`
+- `docs/manual-routing-playbook.md`
+- `docs/integration-snippets.md`
 
-- **Planning-first** — understand and break down the task before acting
-- **Tool-first** — prefer checking, running, and verifying over guessing
-- **Evidence-based** — claims should be grounded in observed results
-- **Progress-aware** — long tasks should expose state and next steps
-- **Delivery-oriented** — aim to produce outputs, not just commentary
+### Long-task / state / recovery
+- `docs/long-task-patterns.md`
+- `docs/checkpoint-template.md`
+- `docs/resume-recovery-guide.md`
+- `docs/long-task-example.md`
 
-## Repository structure
+### Evaluation and benchmarks
+- `docs/benchmark-results-guide.md`
+- `docs/benchmark-contribution-guide.md`
+- `docs/evaluation-cadence.md`
+- `benchmarks/rubric.md`
+- `benchmarks/tasks/`
+- `benchmarks/results/`
 
-```text
-openclaw-upgrade-kit/
-├── README.md
-├── LICENSE
-├── skills/
-│   ├── openclaw-manus/
-│   │   ├── SKILL.md
-│   │   ├── references/
-│   │   │   ├── execution-loop.md
-│   │   │   ├── tool-selection-policy.md
-│   │   │   ├── reporting-format.md
-│   │   │   ├── task-patterns.md
-│   │   │   └── examples.md
-│   │   └── agents/
-│   │       └── openai.yaml
-│   ├── openclaw-ops/
-│   │   ├── SKILL.md
-│   │   ├── references/
-│   │   │   ├── incident-loop.md
-│   │   │   ├── ops-checklist.md
-│   │   │   └── validation-patterns.md
-│   │   └── agents/
-│   │       └── openai.yaml
-│   ├── openclaw-research/
-│   │   ├── SKILL.md
-│   │   ├── references/
-│   │   │   ├── research-loop.md
-│   │   │   ├── source-hierarchy.md
-│   │   │   └── synthesis-patterns.md
-│   │   └── agents/
-│   │       └── openai.yaml
-│   ├── openclaw-coding/
-│   │   ├── SKILL.md
-│   │   ├── references/
-│   │   │   ├── coding-loop.md
-│   │   │   ├── diff-strategy.md
-│   │   │   └── validation-patterns.md
-│   │   └── agents/
-│   │       └── openai.yaml
-│   └── openclaw-docs/
-│       ├── SKILL.md
-│       ├── references/
-│       │   ├── doc-review-loop.md
-│       │   ├── drift-checklist.md
-│       │   └── validation-boundaries.md
-│       └── agents/
-│           └── openai.yaml
-├── benchmarks/
-│   ├── results/
-│   │   ├── template.md
-│   │   ├── coding-example.md
-│   │   ├── docs-example.md
-│   │   ├── ops-example.md
-│   │   └── research-example.md
-│   ├── tasks/
-│   │   ├── coding.md
-│   │   ├── docs.md
-│   │   ├── ops.md
-│   │   └── research.md
-│   └── rubric.md
-├── docs/
-│   ├── installation-and-usage.md
-│   ├── integration-snippets.md
-│   ├── openclaw-integration.md
-│   ├── openclaw-setup-example.md
-│   ├── skill-selection-guide.md
-│   ├── design-principles.md
-│   ├── upgrade-philosophy.md
-│   ├── launch-positioning.md
-│   ├── limitations.md
-│   ├── benchmark-results-guide.md
-│   ├── packaging-plan.md
-│   ├── versioned-installation-notes.md
-│   └── roadmap-10-phases.md
-├── scripts/
-│   ├── install_local_skills.sh
-│   ├── install_selected_skills.sh
-│   ├── list_packaged_skills.sh
-│   └── print_version_info.sh
-└── examples/
-    ├── before-after-coding.md
-    ├── before-after-docs.md
-    ├── before-after-ops.md
-    └── before-after-research.md
-```
+### Packaging and release
+- `docs/versioned-installation-notes.md`
+- `docs/packaging-plan.md`
+- `docs/release-archive-workflow.md`
+- `docs/release-checklist.md`
+- `docs/release-plan-v0.1.0.md`
+- `docs/release-plan-v0.1.1.md`
+- `docs/release-notes-v0.1.0.md`
+- `docs/release-notes-v0.1.1.md`
 
-## Included skills
+### Project direction
+- `docs/design-principles.md`
+- `docs/upgrade-philosophy.md`
+- `docs/launch-positioning.md`
+- `docs/limitations.md`
+- `docs/roadmap-10-phases.md`
 
-### `openclaw-manus`
-A general execution-upgrade skill for planning, tool use, evidence gathering, progress reporting, and delivery.
-
-### `openclaw-ops`
-A specialized ops skill for runtime troubleshooting, log inspection, config validation, and safe corrective actions.
-
-### `openclaw-research`
-A specialized research skill for current-info lookup, source-backed comparison, and differentiation analysis.
-
-### `openclaw-coding`
-A specialized coding skill for repository inspection, minimal diffs, implementation changes, and validation-heavy tasks.
-
-### `openclaw-docs`
-A specialized documentation skill for README/setup/runbook review, doc-to-code drift detection, and correction planning.
-
-## Current package contents
-
-Today this repository already includes:
-
-- 5 packaged skills
-- local install, selective install, listing, and version-info scripts
-- benchmark tasks, scoring rubric, result template, and example results
-- setup, integration, packaging, and roadmap docs
-
-Recommended first path:
-
-1. list packaged skills with `./scripts/list_packaged_skills.sh`
-2. install all skills with `./scripts/install_local_skills.sh ~/.codex/skills`
-3. read `docs/openclaw-setup-example.md`
-4. use `docs/skill-selection-guide.md` to pick the right skill for the task
-5. record benchmark outcomes with `docs/benchmark-results-guide.md`
+---
 
 ## Benchmarks
 
-This repo encourages comparing:
-
+This repository evaluates upgrades by comparing:
 1. base OpenClaw
-2. OpenClaw with a simple prompt
-3. OpenClaw with `openclaw-manus`
+2. OpenClaw + generic prompt
+3. OpenClaw + the relevant skill / routing pattern
 
-Suggested evaluation dimensions:
+Current benchmark assets include:
+- task prompts in `benchmarks/tasks/`
+- scoring in `benchmarks/rubric.md`
+- result template in `benchmarks/results/template.md`
+- example results for `research`, `coding`, `ops`, `docs`, and `long-task`
 
-- does it create a plan?
-- does it use tools before speculating?
-- does it verify findings?
-- does it keep the user updated?
-- does it produce a concrete outcome?
+---
 
-## Roadmap
+## Quick start
+
+```bash
+./scripts/list_packaged_skills.sh
+./scripts/install_local_skills.sh ~/.codex/skills
+./scripts/print_version_info.sh
+```
+
+Then read:
+- `docs/openclaw-setup-example.md`
+- `docs/skill-selection-guide.md`
+- `docs/runtime-routing-patterns.md`
+- `docs/benchmark-results-guide.md`
+
+---
+
+## Repository layout
+
+```text
+openclaw-upgrade-kit/
+├── skills/        # packaged skills
+├── benchmarks/    # rubric, task prompts, result examples
+├── docs/          # integration, routing, long-task, release docs
+├── scripts/       # install, packaging, release helpers
+└── examples/      # before/after examples
+```
+
+---
+
+## Roadmap status
 
 The project now has a staged roadmap with explicit goals, dependencies, and verifiable deliverables.
 
-- `docs/roadmap-10-phases.md` — 10 development phases with goals, scope, deliverables, acceptance criteria, and dependency notes
+See:
+- `docs/roadmap-10-phases.md`
 
 Current near-term focus:
 - community benchmark contribution flow
 - release/evaluation discipline
 - long-task benchmark examples
+- more engineering-focused packaging and runtime patterns
+
+---
 
 ## Contributing
 
-Contributions are welcome, especially in:
+High-value contributions include:
+- benchmark tasks and benchmark evidence
+- stronger before/after examples
+- skill improvements with clear validation value
+- runtime integration examples
+- packaging and release workflow improvements
 
-- benchmark tasks
-- before/after examples
-- tool-use policies
-- task decomposition patterns
-- OpenClaw integration improvements
+Start with:
+- `CONTRIBUTING.md`
+- `docs/benchmark-contribution-guide.md`
+- `docs/release-checklist.md`
+
+---
 
 ## License
 
-This repository is released under the MIT License.
-
-
-## Additional docs
-
-- `docs/installation-and-usage.md`
-- `docs/integration-snippets.md`
-- `docs/openclaw-integration.md`
-- `docs/openclaw-setup-example.md`
-- `docs/skill-selection-guide.md`
-- `docs/github-launch-kit.md`
-- `docs/release-notes-v0.1.0.md`
-- `docs/roadmap-10-phases.md`
-- `docs/runtime-routing-patterns.md`
-- `docs/default-vs-specialized-routing.md`
-- `docs/fallback-policy.md`
-- `docs/benchmark-results-guide.md`
-- `docs/long-task-patterns.md`
-- `docs/long-task-example.md`
-- `docs/checkpoint-template.md`
-- `docs/resume-recovery-guide.md`
-- `docs/benchmark-contribution-guide.md`
-- `docs/release-checklist.md`
-- `docs/evaluation-cadence.md`
-- `benchmarks/results/template.md`
-- `benchmarks/results/research-example.md`
-- `benchmarks/results/coding-example.md`
-- `benchmarks/results/ops-example.md`
-
-
-## Quick start
-
-Install the packaged local skills into a target skill directory:
-
-```bash
-./scripts/install_local_skills.sh ~/.codex/skills
-```
-
-Then review:
-- `docs/installation-and-usage.md`
-- `docs/openclaw-setup-example.md`
-- `docs/skill-selection-guide.md`
-- `docs/roadmap-10-phases.md`
-- `docs/runtime-routing-patterns.md`
-- `docs/default-vs-specialized-routing.md`
-- `docs/fallback-policy.md`
-- `docs/benchmark-results-guide.md`
-- `docs/long-task-patterns.md`
-- `docs/long-task-example.md`
-- `docs/checkpoint-template.md`
-- `docs/resume-recovery-guide.md`
-- `docs/benchmark-contribution-guide.md`
-- `docs/release-checklist.md`
-- `docs/evaluation-cadence.md`
-- `docs/long-task-example.md`
+MIT

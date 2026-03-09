@@ -1,0 +1,113 @@
+name: Benchmark contribution
+description: Propose or submit benchmark evidence for a task category in openclaw-upgrade-kit.
+title: "[Benchmark]: "
+labels:
+  - benchmark
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to propose or submit benchmark evidence.
+        Keep it concrete, reproducible, and tied to the existing rubric.
+
+  - type: input
+    id: task_name
+    attributes:
+      label: Task name
+      description: Short name for the benchmark task.
+      placeholder: README setup drift review
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Task type
+      options:
+        - coding
+        - ops
+        - research
+        - docs
+        - long-task
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Exact prompt
+      description: Paste the exact task prompt used for the comparison.
+      placeholder: Review this README against the actual repository setup process...
+    validations:
+      required: true
+
+  - type: textarea
+    id: compared_runs
+    attributes:
+      label: Compared runs
+      description: List the compared run modes.
+      placeholder: |
+        1. base OpenClaw
+        2. OpenClaw + generic prompt
+        3. OpenClaw + openclaw-docs
+    validations:
+      required: true
+
+  - type: textarea
+    id: rubric_scores
+    attributes:
+      label: Rubric scores
+      description: Provide scores for goal framing, planning, tool usage, evidence quality, progress reporting, and delivery quality.
+      placeholder: |
+        Goal framing: 1 / 2 / 3
+        Planning quality: 1 / 2 / 3
+        Tool usage: 1 / 2 / 3
+        Evidence quality: 1 / 2 / 3
+        Progress reporting: 1 / 2 / 3
+        Delivery quality: 1 / 2 / 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: qualitative_notes
+    attributes:
+      label: Qualitative notes
+      description: Summarize the main behavioral differences.
+      placeholder: |
+        Base behavior: ...
+        Generic prompt behavior: ...
+        Upgraded skill behavior: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: version_info
+    attributes:
+      label: Version info
+      description: Paste output from ./scripts/print_version_info.sh or equivalent.
+      placeholder: |
+        openclaw-upgrade-kit version info
+        - tag: ...
+        - branch: ...
+        - commit: ...
+    validations:
+      required: true
+
+  - type: input
+    id: result_file
+    attributes:
+      label: Proposed result filename
+      description: Suggested file path under benchmarks/results/.
+      placeholder: benchmarks/results/docs-example-readme-setup.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_useful
+    attributes:
+      label: Why is this benchmark useful?
+      description: Explain why this adds value beyond existing examples.
+      placeholder: It covers a missing docs benchmark case and helps release validation.
+    validations:
+      required: true
