@@ -29,11 +29,18 @@ Use it to choose, sequence, and hand off to the right skill.
 ## Preferred workflow
 
 - Goal
-- Task shape
-- Dominant evidence source
-- Selected skill
-- Fallback path
-- Validation of the routing choice
+- Plan
+- Progress
+- Validation
+- Next step
+
+For runtime tasks, the plan/progress layer should still expose:
+- task shape
+- dominant evidence source
+- selected skill or layout
+- fallback path
+
+Keep the routing decision lightweight, but make it visible.
 
 ## Rules
 

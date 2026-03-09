@@ -77,6 +77,26 @@ When release work is delegated, the parent agent should:
 6. keep roadmap items separate from already released capability
 7. commit or tag only after accepted release evidence is clear
 
+## Transparent-execution entry point
+
+For non-trivial release tasks, keep a minimum transparent-execution block visible:
+- **Goal** — what release question or gate is being resolved
+- **Plan** — what checks, artifacts, or evidence will be reviewed
+- **Progress** — what has already been checked, aligned, or collected
+- **Validation** — what is confirmed, what remains inferred, and what is still unvalidated
+- **Next Step** — the next release check, blocker, or handoff
+
+When wording release findings, keep these boundaries explicit:
+- **Fact** — directly supported by repo state, scripts, docs, or dry-run evidence
+- **Inference** — the current interpretation of that evidence
+- **Unvalidated** — a release expectation or likely verdict that still needs confirmation
+
+If release work is blocked, make the blocked state explicit:
+- what release target or artifact is in scope
+- what was checked
+- what blocker remains
+- what evidence or access is still needed
+
 ## Evidence-before-verdict rule
 
 Do not accept delegated release output only because it reads well.

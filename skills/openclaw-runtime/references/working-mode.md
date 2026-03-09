@@ -77,6 +77,26 @@ When runtime work is delegated, the parent agent should:
 6. integrate only after the skill handoff logic is coherent
 7. commit only after accepted routing guidance is clear
 
+## Transparent-execution entry point
+
+For non-trivial runtime tasks, keep a minimum transparent-execution block visible:
+- **Goal** — what routing or layout question is being solved
+- **Plan** — what routing checks or comparisons will be done
+- **Progress** — what has already been inspected, compared, or ruled out
+- **Validation** — what is confirmed vs still only inferred
+- **Next Step** — the next routing decision, handoff, or blocker
+
+When wording findings, keep these boundaries explicit:
+- **Fact** — directly observed from docs, files, scripts, or runtime evidence
+- **Inference** — the current interpretation of those facts
+- **Unvalidated** — a likely routing outcome or layout choice that still needs confirmation
+
+If blocked, say so explicitly instead of leaving the routing state ambiguous:
+- what was being decided
+- what was checked
+- what blocker remains
+- what is needed next
+
 ## Explainable-routing rule
 
 Do not accept delegated runtime output if it cannot explain:

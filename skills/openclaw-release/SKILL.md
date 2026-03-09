@@ -28,13 +28,18 @@ Use it for:
 ## Preferred workflow
 
 - Goal
-- Release scope
-- Verification plan
-- Checks run
-- Findings
-- Release readiness
-- Risks / blockers
+- Plan
+- Progress
+- Validation
 - Next step
+
+For release tasks, the plan/progress layer should still expose:
+- release scope
+- checks run
+- findings tied to evidence
+- release readiness / blockers
+
+Keep the release flow compact, but do not hide the execution state.
 
 ## Rules
 

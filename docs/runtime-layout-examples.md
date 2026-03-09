@@ -90,7 +90,7 @@ A common subset is:
 - `openclaw-docs` for doc-to-code review
 
 ### What to verify
-- `./.runtime-skills` contains only the selected skills
+- `~/.runtime-skills` contains only the selected skills
 - the selected skills match the task family you expect
 - repo-local paths do not conflict with your global skills directory
 - your runtime can be configured to read a repo-local skill path if needed

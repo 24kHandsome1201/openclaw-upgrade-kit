@@ -110,6 +110,7 @@ This project focuses on that gap.
 | `scripts/prepare_release.sh` | release preparation helper | `./scripts/prepare_release.sh` |
 | `scripts/smoke_test_release.sh` | release smoke-test helper | `./scripts/smoke_test_release.sh` |
 | `scripts/smoke_test_tool_exposure.sh` | trust-first repo smoke test for packaged skills/docs/scripts | `./scripts/smoke_test_tool_exposure.sh` |
+| `scripts/check_doc_paths.py` | lightweight checker for repo-relative Markdown path references | `./scripts/check_doc_paths.py` |
 
 ---
 
@@ -149,6 +150,7 @@ This project focuses on that gap.
 - `docs/provider-error-taxonomy.md`
 - `docs/tool-exposure-smoke-test.md`
 - `docs/touched-scope-reporting.md`
+- `docs/doc-path-lint.md`
 
 ### Packaging and release
 - `docs/versioned-installation-notes.md`
@@ -168,12 +170,14 @@ This project focuses on that gap.
 - `docs/limitations.md`
 - `docs/roadmap-10-phases.md`
 - `docs/delegation-patterns.md`
+- `docs/documentation-style-policy.md`
 
 ### Maintainer / development track
 - `docs/research/agent-product-feedback-report-2026-03.md`
 - `docs/research/derived/product-requirements-from-feedback-2026-03.md`
 - `docs/research/derived/development-priority-roadmap-2026-03.md`
 - `docs/research/derived/executable-backlog-from-feedback-2026-03.md`
+- `docs/skill-reference-taxonomy.md`
 
 ---
 
