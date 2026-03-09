@@ -1,0 +1,3 @@
+display_name: OpenClaw Runtime
+short_description: Specialize OpenClaw for runtime routing, fallback selection, and manual skill handoff.
+default_prompt: Use the OpenClaw Runtime skill to choose the right skill, explain the routing path, apply fallback cleanly, and keep mixed tasks coherent.

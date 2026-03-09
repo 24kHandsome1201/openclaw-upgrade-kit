@@ -21,7 +21,7 @@ It is **not**:
 ## Current capability overview
 
 Today this repository includes:
-- **5 packaged skills**: general execution, ops, research, coding, docs
+- **7 packaged skills**: general execution, ops, research, coding, docs, runtime, release
 - **benchmark system**: rubric, task prompts, result template, result examples
 - **installation/distribution tooling**: install all, install selected, install from tag, version info, release archive generation
 - **runtime guidance**: routing, fallback, manual routing playbooks, integration examples
@@ -83,6 +83,8 @@ This project focuses on that gap.
 | `openclaw-research` | research specialization | latest info, source-backed comparison, differentiation | `skills/openclaw-research/SKILL.md` |
 | `openclaw-coding` | coding specialization | bug fixing, minimal diffs, validation-heavy changes | `skills/openclaw-coding/SKILL.md` |
 | `openclaw-docs` | docs specialization | README/setup/runbook review, doc-to-code drift | `skills/openclaw-docs/SKILL.md` |
+| `openclaw-runtime` | routing/runtime specialization | skill routing, fallback, manual handoff, layout choice | `skills/openclaw-runtime/SKILL.md` |
+| `openclaw-release` | release specialization | release prep, dry-run review, packaging/archive checks | `skills/openclaw-release/SKILL.md` |
 
 **Default routing rule:** if the task is mixed or still unclear, start with `openclaw-manus`, then switch to a specialized skill when one lane becomes dominant.
 
@@ -116,6 +118,7 @@ This project focuses on that gap.
 - `docs/default-vs-specialized-routing.md`
 - `docs/fallback-policy.md`
 - `docs/runtime-integration-examples.md`
+- `docs/runtime-layout-examples.md`
 - `docs/manual-routing-playbook.md`
 - `docs/integration-snippets.md`
 
@@ -138,6 +141,7 @@ This project focuses on that gap.
 - `docs/packaging-plan.md`
 - `docs/release-archive-workflow.md`
 - `docs/release-checklist.md`
+- `docs/release-dry-run-report-v0.1.1.md`
 - `docs/release-plan-v0.1.0.md`
 - `docs/release-plan-v0.1.1.md`
 - `docs/release-notes-v0.1.0.md`
@@ -149,6 +153,7 @@ This project focuses on that gap.
 - `docs/launch-positioning.md`
 - `docs/limitations.md`
 - `docs/roadmap-10-phases.md`
+- `docs/delegation-patterns.md`
 
 ---
 
