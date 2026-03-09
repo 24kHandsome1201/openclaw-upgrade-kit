@@ -186,3 +186,17 @@ This repository is released under the MIT License.
 - `docs/openclaw-integration.md`
 - `docs/github-launch-kit.md`
 - `docs/release-notes-v0.1.0.md`
+
+
+## Quick start
+
+Install the packaged local skills into a target skill directory:
+
+```bash
+./scripts/install_local_skills.sh ~/.codex/skills
+```
+
+Then review:
+- `docs/installation-and-usage.md`
+- `docs/openclaw-setup-example.md`
+- `docs/skill-selection-guide.md`
