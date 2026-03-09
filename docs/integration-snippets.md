@@ -40,7 +40,8 @@ This file provides small copy/paste snippets for common local layouts.
 ├── openclaw-manus/
 ├── openclaw-ops/
 ├── openclaw-research/
-└── openclaw-coding/
+├── openclaw-coding/
+└── openclaw-docs/
 ```
 
 ## 7. Example workflow for testing one specialized skill
@@ -51,4 +52,14 @@ This file provides small copy/paste snippets for common local layouts.
 
 Then run a coding benchmark and score it with:
 - `benchmarks/rubric.md`
+- `benchmarks/results/template.md`
+
+## 8. Example workflow for documentation review
+
+```bash
+./scripts/install_selected_skills.sh ~/.codex/skills openclaw-docs
+```
+
+Then run a README/setup drift review and record findings with:
+- `benchmarks/tasks/docs.md`
 - `benchmarks/results/template.md`

@@ -72,9 +72,13 @@ This repo gives an agent a structured way to:
   - a specialized research / comparison / latest-info skill for OpenClaw
 - `skills/openclaw-coding/`
   - a specialized coding / minimal-diff / validation skill for OpenClaw
+- `skills/openclaw-docs/`
+  - a specialized documentation review / drift-check / setup-validation skill
 - planning / execution / reporting references
 - benchmark task definitions
+- benchmark result templates and examples
 - before/after examples
+- local install and packaging scripts
 
 ## What this is not
 
@@ -126,15 +130,29 @@ openclaw-upgrade-kit/
 │   │   │   └── synthesis-patterns.md
 │   │   └── agents/
 │   │       └── openai.yaml
-│   └── openclaw-coding/
+│   ├── openclaw-coding/
+│   │   ├── SKILL.md
+│   │   ├── references/
+│   │   │   ├── coding-loop.md
+│   │   │   ├── diff-strategy.md
+│   │   │   └── validation-patterns.md
+│   │   └── agents/
+│   │       └── openai.yaml
+│   └── openclaw-docs/
 │       ├── SKILL.md
 │       ├── references/
-│       │   ├── coding-loop.md
-│       │   ├── diff-strategy.md
-│       │   └── validation-patterns.md
+│       │   ├── doc-review-loop.md
+│       │   ├── drift-checklist.md
+│       │   └── validation-boundaries.md
 │       └── agents/
 │           └── openai.yaml
 ├── benchmarks/
+│   ├── results/
+│   │   ├── template.md
+│   │   ├── coding-example.md
+│   │   ├── docs-example.md
+│   │   ├── ops-example.md
+│   │   └── research-example.md
 │   ├── tasks/
 │   │   ├── coding.md
 │   │   ├── docs.md
@@ -142,10 +160,24 @@ openclaw-upgrade-kit/
 │   │   └── research.md
 │   └── rubric.md
 ├── docs/
+│   ├── installation-and-usage.md
+│   ├── integration-snippets.md
+│   ├── openclaw-integration.md
+│   ├── openclaw-setup-example.md
+│   ├── skill-selection-guide.md
 │   ├── design-principles.md
 │   ├── upgrade-philosophy.md
 │   ├── launch-positioning.md
-│   └── limitations.md
+│   ├── limitations.md
+│   ├── benchmark-results-guide.md
+│   ├── packaging-plan.md
+│   ├── versioned-installation-notes.md
+│   └── roadmap-10-phases.md
+├── scripts/
+│   ├── install_local_skills.sh
+│   ├── install_selected_skills.sh
+│   ├── list_packaged_skills.sh
+│   └── print_version_info.sh
 └── examples/
     ├── before-after-coding.md
     ├── before-after-docs.md
@@ -166,6 +198,26 @@ A specialized research skill for current-info lookup, source-backed comparison, 
 
 ### `openclaw-coding`
 A specialized coding skill for repository inspection, minimal diffs, implementation changes, and validation-heavy tasks.
+
+### `openclaw-docs`
+A specialized documentation skill for README/setup/runbook review, doc-to-code drift detection, and correction planning.
+
+## Current package contents
+
+Today this repository already includes:
+
+- 5 packaged skills
+- local install, selective install, listing, and version-info scripts
+- benchmark tasks, scoring rubric, result template, and example results
+- setup, integration, packaging, and roadmap docs
+
+Recommended first path:
+
+1. list packaged skills with `./scripts/list_packaged_skills.sh`
+2. install all skills with `./scripts/install_local_skills.sh ~/.codex/skills`
+3. read `docs/openclaw-setup-example.md`
+4. use `docs/skill-selection-guide.md` to pick the right skill for the task
+5. record benchmark outcomes with `docs/benchmark-results-guide.md`
 
 ## Benchmarks
 
@@ -190,9 +242,9 @@ The project now has a staged roadmap with explicit goals, dependencies, and veri
 - `docs/roadmap-10-phases.md` — 10 development phases with goals, scope, deliverables, acceptance criteria, and dependency notes
 
 Current near-term focus:
-- benchmark results layer
-- coding-specialized skill work
-- documentation/review workflow improvements
+- runtime integration patterns
+- long-task / checkpoint / recovery patterns
+- packaging/version clarity
 
 ## Contributing
 
@@ -212,11 +264,20 @@ This repository is released under the MIT License.
 ## Additional docs
 
 - `docs/installation-and-usage.md`
+- `docs/integration-snippets.md`
 - `docs/openclaw-integration.md`
+- `docs/openclaw-setup-example.md`
+- `docs/skill-selection-guide.md`
 - `docs/github-launch-kit.md`
 - `docs/release-notes-v0.1.0.md`
 - `docs/roadmap-10-phases.md`
+- `docs/runtime-routing-patterns.md`
+- `docs/default-vs-specialized-routing.md`
+- `docs/fallback-policy.md`
 - `docs/benchmark-results-guide.md`
+- `docs/long-task-patterns.md`
+- `docs/checkpoint-template.md`
+- `docs/resume-recovery-guide.md`
 - `benchmarks/results/template.md`
 - `benchmarks/results/research-example.md`
 - `benchmarks/results/coding-example.md`
@@ -236,4 +297,10 @@ Then review:
 - `docs/openclaw-setup-example.md`
 - `docs/skill-selection-guide.md`
 - `docs/roadmap-10-phases.md`
+- `docs/runtime-routing-patterns.md`
+- `docs/default-vs-specialized-routing.md`
+- `docs/fallback-policy.md`
 - `docs/benchmark-results-guide.md`
+- `docs/long-task-patterns.md`
+- `docs/checkpoint-template.md`
+- `docs/resume-recovery-guide.md`

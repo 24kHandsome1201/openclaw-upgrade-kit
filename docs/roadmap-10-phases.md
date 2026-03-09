@@ -6,6 +6,32 @@ Each phase includes a goal, scope, verifiable deliverables, acceptance criteria,
 
 ---
 
+## Current status snapshot
+
+| Phase | Status | Notes |
+| --- | --- | --- |
+| Phase 1 — Foundation MVP | Done | Core positioning, Manus skill, starter examples, and benchmark baseline are in place. |
+| Phase 2 — Usability and Setup | Done | Install script, setup example, and skill selection docs are present. |
+| Phase 3 — Skill System Expansion | Done | Ops, research, coding, and docs specialization now exist. |
+| Phase 4 — Benchmark Results Layer | Done | Result template, guide, and example result files are present. |
+| Phase 5 — Coding Skill and Code-Change Validation | Done | `openclaw-coding` and coding benchmark/example materials are present. |
+| Phase 6 — Documentation and Review Workflow | Done | `openclaw-docs`, docs example, and doc review materials are present. |
+| Phase 7 — Distribution and Packaging | Partial | Local install/list/version scripts and docs exist; broader packaging can still improve. |
+| Phase 8 — Runtime Integration Patterns | Partial | Integration docs and skill routing guidance exist, but host-runtime patterns can go deeper. |
+| Phase 9 — State, Memory, and Long-Task Patterns | Next | Not yet represented as a dedicated package of docs/templates. |
+| Phase 10 — Validation at Scale and Community Loop | Partial | Benchmark examples and release docs exist, but community/release loop is still early. |
+
+## Recommended next milestone
+
+Prioritize **Phase 8 — Runtime Integration Patterns** next.
+
+Reason:
+- the skill set is already broad enough
+- install/setup docs now exist
+- the biggest remaining usability gap is how these skills should route inside real runtimes
+
+---
+
 ## Phase 1 — Foundation MVP
 
 ### Goal
@@ -271,17 +297,12 @@ Turn the project into a living upgrade framework that improves through repeated 
 ## Suggested priority order
 
 ### Immediate / current focus
-1. Phase 4 — Benchmark Results Layer
-2. Phase 5 — Coding Skill and Code-Change Validation
-3. Phase 6 — Documentation and Review Workflow
-
-### Next support layers
-4. Phase 7 — Distribution and Packaging
-5. Phase 8 — Runtime Integration Patterns
+1. Phase 8 — Runtime Integration Patterns
+2. Phase 7 — Distribution and Packaging
+3. Phase 10 — Validation at Scale and Community Loop
 
 ### Longer-term framework work
-6. Phase 9 — State, Memory, and Long-Task Patterns
-7. Phase 10 — Validation at Scale and Community Loop
+4. Phase 9 — State, Memory, and Long-Task Patterns
 
 ## Working rule
 

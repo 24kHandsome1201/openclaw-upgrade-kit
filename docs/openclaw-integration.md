@@ -15,6 +15,7 @@ If your OpenClaw environment supports local skill folders, copy one or more skil
 Recommended starting skills:
 - `skills/openclaw-manus/`
 - `skills/openclaw-ops/`
+- `skills/openclaw-docs/`
 
 ## Option 2: Use as agent behavior reference
 
@@ -31,8 +32,11 @@ This is still useful because the repo is designed as an execution-behavior layer
 A practical pattern is:
 - use `openclaw-manus` as the default execution-upgrade skill
 - use `openclaw-ops` for service/runtime incidents
+- use `openclaw-research` for latest-info and source-backed comparisons
+- use `openclaw-coding` for repository changes and validation
+- use `openclaw-docs` for README/setup/runbook review and doc drift
 
-This gives you a general skill plus a task-specific skill.
+This gives you a general skill plus task-specific skills.
 
 ## Suggested activation strategy
 
@@ -53,6 +57,27 @@ Use `openclaw-ops` when the task is primarily about:
 - port/process/connectivity checks
 - deployment/runtime validation
 
+### Research specialization
+Use `openclaw-research` when the task is primarily about:
+- latest-information lookup
+- source-backed comparisons
+- API/docs verification against current sources
+- competitor or positioning analysis
+
+### Coding specialization
+Use `openclaw-coding` when the task is primarily about:
+- bug fixing
+- minimal diffs
+- repository cleanup
+- test/build/lint validation
+
+### Documentation specialization
+Use `openclaw-docs` when the task is primarily about:
+- README review
+- setup-flow validation
+- runbook correction
+- doc-to-code drift checks
+
 ## Recommended file mapping
 
 If your environment organizes local skills in a directory, a typical target structure may look like:
@@ -63,19 +88,64 @@ If your environment organizes local skills in a directory, a typical target stru
 │   ├── SKILL.md
 │   ├── references/
 │   └── agents/
-└── openclaw-ops/
+├── openclaw-ops/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+├── openclaw-research/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+├── openclaw-coding/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+└── openclaw-docs/
     ├── SKILL.md
     ├── references/
     └── agents/
 ```
 
+## Practical routing matrix
+
+| Task shape | Default skill | Switch when | Fallback |
+| --- | --- | --- | --- |
+| Mixed or unclear multi-step task | `openclaw-manus` | the task becomes clearly specialized | stay on `openclaw-manus` if uncertainty remains |
+| Service failure / deployment incident | `openclaw-ops` | code changes become the main work | fall back to `openclaw-manus` for mixed diagnosis + delivery |
+| Latest-info / comparison / current docs check | `openclaw-research` | implementation changes become required | fall back to `openclaw-manus` if the task broadens beyond research |
+| Bug fix / repo cleanup / validation-heavy change | `openclaw-coding` | the task shifts to production/runtime debugging | fall back to `openclaw-manus` when coding is only one part of a wider task |
+| README / setup / runbook review | `openclaw-docs` | code changes or runtime debugging become dominant | fall back to `openclaw-manus` for mixed review + execution tasks |
+
+## Fallback and escalation rules
+
+A simple host-runtime rule set is:
+
+1. start with `openclaw-manus` when task type is unclear
+2. switch to a specialized skill once more than half the task is clearly in one lane
+3. stay in the specialized skill while that lane remains dominant
+4. switch back to `openclaw-manus` when the task becomes mixed again
+5. if a docs/research/ops task requires code edits, hand off to `openclaw-coding` for the implementation part
+
+## Manual workflow without automatic skill loading
+
+If your runtime cannot auto-route skills yet, use this manual pattern:
+
+1. classify the task using `docs/skill-selection-guide.md`
+2. open the chosen skill's `SKILL.md`
+3. load only the referenced files needed for that task
+4. execute the task with that skill as the active behavior spec
+5. if the task changes shape, switch to the matching specialized skill
+
+This keeps the upgrade kit useful even in minimal runtimes that only support copy/paste instructions or manual context assembly.
+
 ## Suggested evaluation workflow
 
 1. run a task with base OpenClaw
 2. run the same task with `openclaw-manus`
-3. if it is an ops task, also run with `openclaw-ops`
+3. if it is a specialized task, also run with the matching skill
 4. compare outputs using `benchmarks/rubric.md`
-5. review relevant `examples/before-after-*.md`
+5. record results with `benchmarks/results/template.md`
+6. review relevant `examples/before-after-*.md`
 
 ## Good first tasks to test
 
@@ -83,6 +153,12 @@ If your environment organizes local skills in a directory, a typical target stru
 - diagnose a non-responsive service
 - check doc-to-code drift in a README
 - research whether a project idea is differentiated
+
+## Related routing docs
+
+- `docs/runtime-routing-patterns.md`
+- `docs/default-vs-specialized-routing.md`
+- `docs/fallback-policy.md`
 
 ## Current limitation
 

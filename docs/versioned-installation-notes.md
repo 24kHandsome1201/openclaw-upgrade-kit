@@ -24,6 +24,12 @@ git checkout v0.1.0
 ./scripts/install_selected_skills.sh ~/.codex/skills openclaw-manus openclaw-ops
 ```
 
+For documentation-heavy review work, a common focused install is:
+
+```bash
+./scripts/install_selected_skills.sh ~/.codex/skills openclaw-docs
+```
+
 ## Check local package version
 
 ```bash
