@@ -120,6 +120,7 @@ If needed, read these references:
 - `references/tool-selection-policy.md` for tool choice rules
 - `references/reporting-format.md` for progress/output structure
 - `references/task-patterns.md` for research / coding / ops / docs variants
+- `references/working-mode.md` for staged, verifiable, and delegatable execution mode
 - `references/examples.md` for few-shot examples
 
 ## Mode guidance

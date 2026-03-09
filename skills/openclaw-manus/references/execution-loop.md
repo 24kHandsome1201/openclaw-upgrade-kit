@@ -199,3 +199,13 @@ Examples:
 - compare before/after behavior
 
 Do not present an unverified fix as completed work.
+
+
+## Working-mode extension
+
+For larger tasks, combine this execution loop with `working-mode.md`:
+- define the current stage
+- define a verifiable deliverable
+- delegate independent subtasks when useful
+- review results before integrating them
+- commit only after acceptance

@@ -19,7 +19,11 @@ The goal is to make behavioral improvement visible and reviewable.
 
 - `benchmarks/results/research-example.md`
 - `benchmarks/results/coding-example.md`
+- `benchmarks/results/coding-build-failure-example.md`
+- `benchmarks/results/coding-small-refactor-example.md`
 - `benchmarks/results/ops-example.md`
+- `benchmarks/results/ops-conflict-example.md`
+- `benchmarks/results/ops-misconfig-example.md`
 - `benchmarks/results/docs-example.md`
 - `benchmarks/results/long-task-example.md`
 
@@ -27,7 +31,10 @@ The goal is to make behavioral improvement visible and reviewable.
 
 As the repo grows, keep one result file per benchmark category:
 - coding
+- coding / build-failure
+- coding / small-refactor
 - ops
+- ops conflict / misconfiguration
 - research
 - docs
 - long-task / resume
