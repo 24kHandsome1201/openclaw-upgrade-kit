@@ -50,3 +50,4 @@ If needed, read:
 - `references/release-loop.md`
 - `references/release-check-boundaries.md`
 - `references/evidence-requirements.md`
+- `references/working-mode.md` for staged, verifiable, and delegatable execution mode

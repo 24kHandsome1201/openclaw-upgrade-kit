@@ -50,3 +50,4 @@ If needed, read:
 - `references/fallback-principles.md`
 - `references/manual-routing-patterns.md`
 - `references/layout-selection.md`
+- `references/working-mode.md` for staged, verifiable, and delegatable execution mode
