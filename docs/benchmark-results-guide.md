@@ -15,9 +15,11 @@ The goal is to make behavioral improvement visible and reviewable.
 5. score all three using `benchmarks/rubric.md`
 6. record the result using `benchmarks/results/template.md`
 
-## Current example
+## Current examples
 
 - `benchmarks/results/research-example.md`
+- `benchmarks/results/coding-example.md`
+- `benchmarks/results/ops-example.md`
 
 ## Recommendation
 

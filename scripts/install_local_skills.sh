@@ -33,6 +33,8 @@ copy_skill() {
 
 copy_skill "openclaw-manus"
 copy_skill "openclaw-ops"
+copy_skill "openclaw-research"
+copy_skill "openclaw-coding"
 
 echo
 cat <<MSG

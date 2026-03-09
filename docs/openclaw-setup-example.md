@@ -24,6 +24,8 @@ From the repository root:
 This copies:
 - `skills/openclaw-manus/`
 - `skills/openclaw-ops/`
+- `skills/openclaw-research/`
+- `skills/openclaw-coding/`
 
 into:
 - `~/.codex/skills/`
@@ -38,7 +40,15 @@ You should end up with:
 │   ├── SKILL.md
 │   ├── references/
 │   └── agents/
-└── openclaw-ops/
+├── openclaw-ops/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+├── openclaw-research/
+│   ├── SKILL.md
+│   ├── references/
+│   └── agents/
+└── openclaw-coding/
     ├── SKILL.md
     ├── references/
     └── agents/
@@ -60,11 +70,24 @@ You should end up with:
 - runtime validation
 - incident-style debugging
 
+### Use `openclaw-research` when you want:
+- latest-information lookup
+- source-backed comparison
+- differentiation analysis
+- current docs/API verification
+
+### Use `openclaw-coding` when you want:
+- bug fixing
+- minimal diffs
+- repository cleanup
+- test/build/lint validation
+
 ## Suggested first tests
 
-1. Run a coding cleanup task with `openclaw-manus`
+1. Run a coding cleanup task with `openclaw-coding`
 2. Run a service-debugging task with `openclaw-ops`
-3. Compare output quality using `benchmarks/rubric.md`
+3. Run a latest-info comparison task with `openclaw-research`
+4. Compare output quality using `benchmarks/rubric.md`
 
 ## Notes
 

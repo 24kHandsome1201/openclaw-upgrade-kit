@@ -70,6 +70,8 @@ This repo gives an agent a structured way to:
   - a specialized ops / incident-response skill for OpenClaw
 - `skills/openclaw-research/`
   - a specialized research / comparison / latest-info skill for OpenClaw
+- `skills/openclaw-coding/`
+  - a specialized coding / minimal-diff / validation skill for OpenClaw
 - planning / execution / reporting references
 - benchmark task definitions
 - before/after examples
@@ -116,12 +118,20 @@ openclaw-upgrade-kit/
 │   │   │   └── validation-patterns.md
 │   │   └── agents/
 │   │       └── openai.yaml
-│   └── openclaw-research/
+│   ├── openclaw-research/
+│   │   ├── SKILL.md
+│   │   ├── references/
+│   │   │   ├── research-loop.md
+│   │   │   ├── source-hierarchy.md
+│   │   │   └── synthesis-patterns.md
+│   │   └── agents/
+│   │       └── openai.yaml
+│   └── openclaw-coding/
 │       ├── SKILL.md
 │       ├── references/
-│       │   ├── research-loop.md
-│       │   ├── source-hierarchy.md
-│       │   └── synthesis-patterns.md
+│       │   ├── coding-loop.md
+│       │   ├── diff-strategy.md
+│       │   └── validation-patterns.md
 │       └── agents/
 │           └── openai.yaml
 ├── benchmarks/
@@ -154,6 +164,9 @@ A specialized ops skill for runtime troubleshooting, log inspection, config vali
 ### `openclaw-research`
 A specialized research skill for current-info lookup, source-backed comparison, and differentiation analysis.
 
+### `openclaw-coding`
+A specialized coding skill for repository inspection, minimal diffs, implementation changes, and validation-heavy tasks.
+
 ## Benchmarks
 
 This repo encourages comparing:
@@ -172,11 +185,14 @@ Suggested evaluation dimensions:
 
 ## Roadmap
 
-- more execution skills
-- task-specific variants (research / coding / ops / docs)
-- better benchmark coverage
-- multi-step workflow patterns
-- optional runtime integration guides
+The project now has a staged roadmap with explicit goals, dependencies, and verifiable deliverables.
+
+- `docs/roadmap-10-phases.md` — 10 development phases with goals, scope, deliverables, acceptance criteria, and dependency notes
+
+Current near-term focus:
+- benchmark results layer
+- coding-specialized skill work
+- documentation/review workflow improvements
 
 ## Contributing
 
@@ -199,8 +215,12 @@ This repository is released under the MIT License.
 - `docs/openclaw-integration.md`
 - `docs/github-launch-kit.md`
 - `docs/release-notes-v0.1.0.md`
+- `docs/roadmap-10-phases.md`
+- `docs/benchmark-results-guide.md`
 - `benchmarks/results/template.md`
 - `benchmarks/results/research-example.md`
+- `benchmarks/results/coding-example.md`
+- `benchmarks/results/ops-example.md`
 
 
 ## Quick start
@@ -215,3 +235,5 @@ Then review:
 - `docs/installation-and-usage.md`
 - `docs/openclaw-setup-example.md`
 - `docs/skill-selection-guide.md`
+- `docs/roadmap-10-phases.md`
+- `docs/benchmark-results-guide.md`
